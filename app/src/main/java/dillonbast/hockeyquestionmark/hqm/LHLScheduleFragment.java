@@ -44,8 +44,8 @@ public class LHLScheduleFragment extends Fragment {
     private class JsoupRun extends AsyncTask<Void, Void, Void> {
         String url = "https://sites.google.com/site/hockeyquestionmarkapp/LHLSched";
         Elements td;
-        RelativeLayout rl = (RelativeLayout) getView().findViewById(R.id.rl_lhl_schedule);
-        int numOfTvs = 5;
+        //RelativeLayout rl = (RelativeLayout) getView().findViewById(R.id.rl_lhl_schedule);
+        //int numOfTvs = 5;
 
 
 
@@ -138,26 +138,6 @@ public class LHLScheduleFragment extends Fragment {
                 count++;
             }
 
-            TextView[] array = new TextView[numOfTvs];
-            RelativeLayout.LayoutParams[] rp = new RelativeLayout.LayoutParams[numOfTvs];
-
-           for(int o = 0; o < numOfTvs; o++)
-            {
-                array[o] = new TextView(getActivity());
-
-                // set some properties of rowTextView or something
-                rp[o] =  new RelativeLayout.LayoutParams(
-                        RelativeLayout.LayoutParams.WRAP_CONTENT,
-                        RelativeLayout.LayoutParams.WRAP_CONTENT);
-
-                if (o > 0)
-                    rp[o].addRule(RelativeLayout.BELOW, array[o-1].getId());
-                array[o].setLayoutParams(rp[o]);
-                array[o].setText("TEST" + o);
-                array[o].setTag(o);
-                array[o].setId(o);
-                rl.addView(array[o],rp[o]);
-            }
 
             TextView week = (TextView) getView().findViewById(R.id.tv_lhl_schedule_week_data);
             TextView date = (TextView) getView().findViewById(R.id.tv_lhl_schedule_date_data);
