@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <HorizontalScrollView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_lhl_logo_standings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="LHL Logo"
+                android:src="@mipmap/lhl_logo" />
+
+            <TextView
+                android:id="@+id/tv_lhl_standings_title"
+                android:text="Standings"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_lhl_logo_standings"
+                android:textColor="#000000"
+                android:textSize="36dp" />
+
+            <!-- data headers paired with data-->
+            <TextView
+                android:id="@+id/tv_lhl_standings_rank_title"
+                android:text="Rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:layout_below="@id/iv_lhl_logo_standings"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/tv_lhl_standings_rank_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:layout_below="@id/tv_lhl_standings_rank_title"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/tv_lhl_standings_team_title"
+                android:text="Team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:layout_below="@id/iv_lhl_logo_standings"
+                android:layout_toRightOf="@id/tv_lhl_standings_rank_title"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/tv_lhl_standings_team_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:layout_below="@id/tv_lhl_standings_team_title"
+                android:layout_toRightOf="@id/tv_lhl_standings_rank_title"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/tv_lhl_standings_record_title"
+                android:text="Record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:layout_below="@id/iv_lhl_logo_standings"
+                android:layout_toRightOf="@id/tv_lhl_standings_team_data"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/tv_lhl_standings_record_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:layout_below="@id/tv_lhl_standings_rank_title"
+                android:layout_toRightOf="@id/tv_lhl_standings_team_data"
+                android:textColor="#000000"/>
+            <TextView
+                android:id="@+id/tv_lhl_standings_points_title"
+                android:text="Points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:layout_below="@id/iv_lhl_logo_standings"
+                android:layout_toRightOf="@id/tv_lhl_standings_record_data"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/tv_lhl_standings_points_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:layout_below="@id/tv_lhl_standings_points_title"
+                android:layout_toRightOf="@id/tv_lhl_standings_record_data"
+                android:textColor="#000000" />
+
+
+            </RelativeLayout>
+        </HorizontalScrollView>
+    </ScrollView>

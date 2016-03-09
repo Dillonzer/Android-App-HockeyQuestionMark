@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Legends Hockey League">
+        <menu>
+            <item
+            android:id="@+id/lhl_s"
+            android:icon="@mipmap/lhl_logo"
+            android:title="Schedule" />
+            <item
+            android:id="@+id/lhl_r"
+            android:icon="@mipmap/lhl_logo"
+            android:title="Rosters" />
+            <item
+                android:id="@+id/lhl_st"
+                android:icon="@mipmap/lhl_logo"
+                android:title="Standings" />
+        </menu>
+    </item>
+
+    <item android:title="Rising Stars League">
+        <menu>
+            <item
+                android:id="@+id/rsl_s"
+                android:icon="@mipmap/rsl_logo"
+                android:title="Schedule" />
+            <item
+                android:id="@+id/rsl_r"
+                android:icon="@mipmap/rsl_logo"
+                android:title="Rosters" />
+            <item
+                android:id="@+id/rsl_st"
+                android:icon="@mipmap/rsl_logo"
+                android:title="Standings" />
+        </menu>
+    </item>
+
+    <item android:title="Junior Stars League">
+        <menu>
+            <item
+                android:id="@+id/jsl_s"
+                android:icon="@mipmap/jsl_logo"
+                android:title="Schedule" />
+            <item
+                android:id="@+id/jsl_r"
+                android:icon="@mipmap/jsl_logo"
+                android:title="Rosters" />
+            <item
+                android:id="@+id/jsl_st"
+                android:icon="@mipmap/jsl_logo"
+                android:title="Standings" />
+        </menu>
+    </item>
+
+</menu>

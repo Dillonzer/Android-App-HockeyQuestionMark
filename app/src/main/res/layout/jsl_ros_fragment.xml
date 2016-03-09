@@ -1,0 +1,2199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <HorizontalScrollView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_jsl_logo_roster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="jsl Logo"
+                android:src="@mipmap/jsl_logo" />
+
+            <TextView
+                android:id="@+id/tv_jsl_roster_title"
+                android:text="Rosters"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_jsl_logo_roster"
+                android:textColor="#000000"
+                android:textSize="36dp" />
+
+            <!-- start of team 1 -->
+            <ImageView
+                android:id="@+id/iv_jsl_team_1_roster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:src="@mipmap/jsl_seadogs"
+                android:layout_below="@id/tv_jsl_roster_title" />
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_roster"
+                android:textColor="#000000"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_jsl_team_1_roster"
+                android:layout_below="@id/tv_jsl_roster_title"/>
+
+            <!-- team stats (seperate tv's for each stat, sigh) -->
+            <!-- GP - WINS - OTW - OTL - LOSSES - POINTS - STREAK -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_stats_gp_title"
+                android:text="GP"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_jsl_team_1_roster"
+                android:layout_below="@id/tv_jsl_team_1_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_stats_wins_title"
+                android:text="WINS"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_1_stats_gp_title"
+                android:layout_below="@id/tv_jsl_team_1_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_stats_OTW_title"
+                android:text="OTW"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_1_stats_wins_title"
+                android:layout_below="@id/tv_jsl_team_1_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_stats_OTL_title"
+                android:text="OTL"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_1_stats_OTW_title"
+                android:layout_below="@id/tv_jsl_team_1_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_stats_LOSSES_title"
+                android:text="LOSSES"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_1_stats_OTL_title"
+                android:layout_below="@id/tv_jsl_team_1_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_stats_POINTS_title"
+                android:text="POINTS"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_1_stats_LOSSES_title"
+                android:layout_below="@id/tv_jsl_team_1_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_stats_STREAK_title"
+                android:text="STREAK"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_1_stats_POINTS_title"
+                android:layout_below="@id/tv_jsl_team_1_roster"/>
+
+            <!-- variable team stats -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_stats_gp"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_jsl_team_1_roster"
+                android:layout_below="@id/tv_jsl_team_1_stats_gp_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_stats_wins"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_1_stats_gp_title"
+                android:layout_below="@id/tv_jsl_team_1_stats_wins_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_stats_OTW"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_1_stats_wins_title"
+                android:layout_below="@id/tv_jsl_team_1_stats_OTW_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_stats_OTL"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_1_stats_OTW_title"
+                android:layout_below="@id/tv_jsl_team_1_stats_OTL_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_stats_LOSSES"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_1_stats_OTL_title"
+                android:layout_below="@id/tv_jsl_team_1_stats_LOSSES_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_stats_POINTS"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_1_stats_LOSSES_title"
+                android:layout_below="@id/tv_jsl_team_1_stats_POINTS_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_stats_STREAK"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_1_stats_POINTS_title"
+                android:layout_below="@id/tv_jsl_team_1_stats_STREAK_title"/>
+
+            <!-- player stats titles(seperate tv's for each stat, sigh) -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_name"
+                android:textColor="#000000"
+                android:text="Name"
+                android:paddingTop="15dp"
+                android:paddingRight="75dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_pos"
+                android:textColor="#000000"
+                android:text="Pos"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_name"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_role"
+                android:textColor="#000000"
+                android:text="Role"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_pos"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_pts"
+                android:textColor="#000000"
+                android:text="Points"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_role"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_goals"
+                android:textColor="#000000"
+                android:text="Goals"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_pts"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_assists"
+                android:textColor="#000000"
+                android:text="Assists"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_goals"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_ppg"
+                android:textColor="#000000"
+                android:text="PPG"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_assists"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_plusmin"
+                android:textColor="#000000"
+                android:text="+ / -"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_ppg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_gwg"
+                android:textColor="#000000"
+                android:text="GWG"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_plusmin"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_goalperc"
+                android:textColor="#000000"
+                android:text="Goal %"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_gwg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_saves"
+                android:textColor="#000000"
+                android:text="Saves"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_goalperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_saveperc"
+                android:textColor="#000000"
+                android:text="Save %"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_saves"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_goalsagainst"
+                android:textColor="#000000"
+                android:text="GA"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_saveperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_goalsagainstavg"
+                android:textColor="#000000"
+                android:text="GAA"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_goalsagainst"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_gamesplayed"
+                android:textColor="#000000"
+                android:text="GP"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_goalsagainstavg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_gamesplayedasg"
+                android:textColor="#000000"
+                android:text="GP@G"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_gamesplayed"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_wins"
+                android:textColor="#000000"
+                android:text="Wins"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_gamesplayedasg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_title_shutouts"
+                android:textColor="#000000"
+                android:text="SO"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_1_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_wins"/>
+
+            <!-- player stats variables -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_name"
+                android:textColor="#000000"
+                android:paddingRight="55dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_name"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_pos"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_pos"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_name"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_role"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_role"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_pos"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_pts"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_pts"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_role"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_goals"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_goals"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_pts"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_assists"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_assists"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_goals"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_ppg"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_ppg"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_assists"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_plusmin"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_plusmin"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_ppg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_gwg"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_jsl_team_1_player_stats_title_gwg"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_plusmin"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_goalperc"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_goalperc"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_gwg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_saves"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_saves"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_goalperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_saveperc"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_saveperc"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_saves"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_goalsagainst"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_goalsagainst"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_saveperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_goalsagainstavg"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_goalsagainstavg"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_goalsagainst"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_gamesplayed"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_gamesplayed"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_goalsagainstavg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_gamesplayedasg"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_gamesplayedasg"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_gamesplayed"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_wins"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_wins"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_gamesplayedasg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_1_player_stats_shutouts"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_title_shutouts"
+                android:layout_toRightOf="@id/tv_jsl_team_1_player_stats_title_wins"/>
+
+            <!-- end of team 1 -->
+
+            <!-- start of team 2-->
+            <ImageView
+                android:id="@+id/iv_jsl_team_2_roster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:src="@mipmap/jsl_texas"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_name" />
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_roster"
+                android:textColor="#000000"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_jsl_team_2_roster"
+                android:layout_below="@id/tv_jsl_team_1_player_stats_name"/>
+
+            <!-- team stats (seperate tv's for each stat, sigh) -->
+            <!-- GP - WINS - OTW - OTL - LOSSES - POINTS - STREAK -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_stats_gp_title"
+                android:text="GP"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_jsl_team_2_roster"
+                android:layout_below="@id/tv_jsl_team_2_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_stats_wins_title"
+                android:text="WINS"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_2_stats_gp_title"
+                android:layout_below="@id/tv_jsl_team_2_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_stats_OTW_title"
+                android:text="OTW"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_2_stats_wins_title"
+                android:layout_below="@id/tv_jsl_team_2_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_stats_OTL_title"
+                android:text="OTL"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_2_stats_OTW_title"
+                android:layout_below="@id/tv_jsl_team_2_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_stats_LOSSES_title"
+                android:text="LOSSES"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_2_stats_OTL_title"
+                android:layout_below="@id/tv_jsl_team_2_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_stats_POINTS_title"
+                android:text="POINTS"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_2_stats_LOSSES_title"
+                android:layout_below="@id/tv_jsl_team_2_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_stats_STREAK_title"
+                android:text="STREAK"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_2_stats_POINTS_title"
+                android:layout_below="@id/tv_jsl_team_2_roster"/>
+
+            <!-- variable team stats -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_stats_gp"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_jsl_team_2_roster"
+                android:layout_below="@id/tv_jsl_team_2_stats_gp_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_stats_wins"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_2_stats_gp_title"
+                android:layout_below="@id/tv_jsl_team_2_stats_wins_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_stats_OTW"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_2_stats_wins_title"
+                android:layout_below="@id/tv_jsl_team_2_stats_OTW_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_stats_OTL"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_2_stats_OTW_title"
+                android:layout_below="@id/tv_jsl_team_2_stats_OTL_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_stats_LOSSES"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_2_stats_OTL_title"
+                android:layout_below="@id/tv_jsl_team_2_stats_LOSSES_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_stats_POINTS"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_2_stats_LOSSES_title"
+                android:layout_below="@id/tv_jsl_team_2_stats_POINTS_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_stats_STREAK"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_2_stats_POINTS_title"
+                android:layout_below="@id/tv_jsl_team_2_stats_STREAK_title"/>
+
+            <!-- player stats titles(seperate tv's for each stat, sigh) -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_name"
+                android:textColor="#000000"
+                android:text="Name"
+                android:paddingTop="15dp"
+                android:paddingRight="75dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_pos"
+                android:textColor="#000000"
+                android:text="Pos"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_name"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_role"
+                android:textColor="#000000"
+                android:text="Role"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_pos"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_pts"
+                android:textColor="#000000"
+                android:text="Points"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_role"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_goals"
+                android:textColor="#000000"
+                android:text="Goals"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_pts"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_assists"
+                android:textColor="#000000"
+                android:text="Assists"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_goals"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_ppg"
+                android:textColor="#000000"
+                android:text="PPG"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_assists"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_plusmin"
+                android:textColor="#000000"
+                android:text="+ / -"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_ppg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_gwg"
+                android:textColor="#000000"
+                android:text="GWG"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_plusmin"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_goalperc"
+                android:textColor="#000000"
+                android:text="Goal %"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_gwg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_saves"
+                android:textColor="#000000"
+                android:text="Saves"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_goalperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_saveperc"
+                android:textColor="#000000"
+                android:text="Save %"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_saves"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_goalsagainst"
+                android:textColor="#000000"
+                android:text="GA"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_saveperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_goalsagainstavg"
+                android:textColor="#000000"
+                android:text="GAA"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_goalsagainst"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_gamesplayed"
+                android:textColor="#000000"
+                android:text="GP"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_goalsagainstavg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_gamesplayedasg"
+                android:textColor="#000000"
+                android:text="GP@G"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_gamesplayed"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_wins"
+                android:textColor="#000000"
+                android:text="Wins"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_gamesplayedasg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_title_shutouts"
+                android:textColor="#000000"
+                android:text="SO"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_2_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_wins"/>
+
+            <!-- player stats variables -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_name"
+                android:textColor="#000000"
+                android:paddingRight="55dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_name"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_pos"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_pos"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_name"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_role"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_role"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_pos"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_pts"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_pts"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_role"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_goals"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_goals"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_pts"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_assists"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_assists"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_goals"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_ppg"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_ppg"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_assists"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_plusmin"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_plusmin"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_ppg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_gwg"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_jsl_team_2_player_stats_title_gwg"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_plusmin"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_goalperc"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_goalperc"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_gwg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_saves"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_saves"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_goalperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_saveperc"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_saveperc"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_saves"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_goalsagainst"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_goalsagainst"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_saveperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_goalsagainstavg"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_goalsagainstavg"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_goalsagainst"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_gamesplayed"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_gamesplayed"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_goalsagainstavg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_gamesplayedasg"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_gamesplayedasg"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_gamesplayed"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_wins"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_wins"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_gamesplayedasg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_2_player_stats_shutouts"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_title_shutouts"
+                android:layout_toRightOf="@id/tv_jsl_team_2_player_stats_title_wins"/>
+
+            <!-- end of team 2 -->
+            <!-- start of team 3-->
+            <ImageView
+                android:id="@+id/iv_jsl_team_3_roster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:src="@mipmap/jsl_mallards"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_name" />
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_roster"
+                android:textColor="#000000"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_jsl_team_3_roster"
+                android:layout_below="@id/tv_jsl_team_2_player_stats_name"/>
+
+            <!-- team stats (seperate tv's for each stat, sigh) -->
+            <!-- GP - WINS - OTW - OTL - LOSSES - POINTS - STREAK -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_stats_gp_title"
+                android:text="GP"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_jsl_team_3_roster"
+                android:layout_below="@id/tv_jsl_team_3_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_stats_wins_title"
+                android:text="WINS"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_3_stats_gp_title"
+                android:layout_below="@id/tv_jsl_team_3_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_stats_OTW_title"
+                android:text="OTW"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_3_stats_wins_title"
+                android:layout_below="@id/tv_jsl_team_3_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_stats_OTL_title"
+                android:text="OTL"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_3_stats_OTW_title"
+                android:layout_below="@id/tv_jsl_team_3_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_stats_LOSSES_title"
+                android:text="LOSSES"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_3_stats_OTL_title"
+                android:layout_below="@id/tv_jsl_team_3_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_stats_POINTS_title"
+                android:text="POINTS"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_3_stats_LOSSES_title"
+                android:layout_below="@id/tv_jsl_team_3_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_stats_STREAK_title"
+                android:text="STREAK"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_3_stats_POINTS_title"
+                android:layout_below="@id/tv_jsl_team_3_roster"/>
+
+            <!-- variable team stats -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_stats_gp"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_jsl_team_3_roster"
+                android:layout_below="@id/tv_jsl_team_3_stats_gp_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_stats_wins"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_3_stats_gp_title"
+                android:layout_below="@id/tv_jsl_team_3_stats_wins_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_stats_OTW"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_3_stats_wins_title"
+                android:layout_below="@id/tv_jsl_team_3_stats_OTW_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_stats_OTL"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_3_stats_OTW_title"
+                android:layout_below="@id/tv_jsl_team_3_stats_OTL_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_stats_LOSSES"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_3_stats_OTL_title"
+                android:layout_below="@id/tv_jsl_team_3_stats_LOSSES_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_stats_POINTS"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_3_stats_LOSSES_title"
+                android:layout_below="@id/tv_jsl_team_3_stats_POINTS_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_stats_STREAK"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_3_stats_POINTS_title"
+                android:layout_below="@id/tv_jsl_team_3_stats_STREAK_title"/>
+
+            <!-- player stats titles(seperate tv's for each stat, sigh) -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_name"
+                android:textColor="#000000"
+                android:text="Name"
+                android:paddingTop="15dp"
+                android:paddingRight="75dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_pos"
+                android:textColor="#000000"
+                android:text="Pos"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_name"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_role"
+                android:textColor="#000000"
+                android:text="Role"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_pos"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_pts"
+                android:textColor="#000000"
+                android:text="Points"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_role"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_goals"
+                android:textColor="#000000"
+                android:text="Goals"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_pts"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_assists"
+                android:textColor="#000000"
+                android:text="Assists"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_goals"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_ppg"
+                android:textColor="#000000"
+                android:text="PPG"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_assists"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_plusmin"
+                android:textColor="#000000"
+                android:text="+ / -"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_ppg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_gwg"
+                android:textColor="#000000"
+                android:text="GWG"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_plusmin"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_goalperc"
+                android:textColor="#000000"
+                android:text="Goal %"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_gwg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_saves"
+                android:textColor="#000000"
+                android:text="Saves"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_goalperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_saveperc"
+                android:textColor="#000000"
+                android:text="Save %"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_saves"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_goalsagainst"
+                android:textColor="#000000"
+                android:text="GA"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_saveperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_goalsagainstavg"
+                android:textColor="#000000"
+                android:text="GAA"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_goalsagainst"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_gamesplayed"
+                android:textColor="#000000"
+                android:text="GP"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_goalsagainstavg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_gamesplayedasg"
+                android:textColor="#000000"
+                android:text="GP@G"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_gamesplayed"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_wins"
+                android:textColor="#000000"
+                android:text="Wins"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_gamesplayedasg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_title_shutouts"
+                android:textColor="#000000"
+                android:text="SO"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_3_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_wins"/>
+
+            <!-- player stats variables -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_name"
+                android:textColor="#000000"
+                android:paddingRight="55dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_name"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_pos"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_pos"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_name"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_role"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_role"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_pos"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_pts"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_pts"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_role"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_goals"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_goals"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_pts"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_assists"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_assists"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_goals"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_ppg"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_ppg"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_assists"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_plusmin"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_plusmin"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_ppg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_gwg"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_jsl_team_3_player_stats_title_gwg"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_plusmin"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_goalperc"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_goalperc"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_gwg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_saves"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_saves"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_goalperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_saveperc"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_saveperc"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_saves"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_goalsagainst"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_goalsagainst"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_saveperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_goalsagainstavg"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_goalsagainstavg"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_goalsagainst"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_gamesplayed"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_gamesplayed"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_goalsagainstavg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_gamesplayedasg"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_gamesplayedasg"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_gamesplayed"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_wins"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_wins"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_gamesplayedasg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_3_player_stats_shutouts"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_title_shutouts"
+                android:layout_toRightOf="@id/tv_jsl_team_3_player_stats_title_wins"/>
+
+            <!-- end of team 3 -->
+            <!-- start of team 4-->
+            <ImageView
+                android:id="@+id/iv_jsl_team_4_roster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:src="@mipmap/jsl_lakeerie"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_name" />
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_roster"
+                android:textColor="#000000"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_jsl_team_4_roster"
+                android:layout_below="@id/tv_jsl_team_3_player_stats_name"/>
+
+            <!-- team stats (seperate tv's for each stat, sigh) -->
+            <!-- GP - WINS - OTW - OTL - LOSSES - POINTS - STREAK -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_stats_gp_title"
+                android:text="GP"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_jsl_team_4_roster"
+                android:layout_below="@id/tv_jsl_team_4_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_stats_wins_title"
+                android:text="WINS"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_4_stats_gp_title"
+                android:layout_below="@id/tv_jsl_team_4_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_stats_OTW_title"
+                android:text="OTW"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_4_stats_wins_title"
+                android:layout_below="@id/tv_jsl_team_4_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_stats_OTL_title"
+                android:text="OTL"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_4_stats_OTW_title"
+                android:layout_below="@id/tv_jsl_team_4_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_stats_LOSSES_title"
+                android:text="LOSSES"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_4_stats_OTL_title"
+                android:layout_below="@id/tv_jsl_team_4_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_stats_POINTS_title"
+                android:text="POINTS"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_4_stats_LOSSES_title"
+                android:layout_below="@id/tv_jsl_team_4_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_stats_STREAK_title"
+                android:text="STREAK"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_4_stats_POINTS_title"
+                android:layout_below="@id/tv_jsl_team_4_roster"/>
+
+            <!-- variable team stats -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_stats_gp"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_jsl_team_4_roster"
+                android:layout_below="@id/tv_jsl_team_4_stats_gp_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_stats_wins"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_4_stats_gp_title"
+                android:layout_below="@id/tv_jsl_team_4_stats_wins_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_stats_OTW"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_4_stats_wins_title"
+                android:layout_below="@id/tv_jsl_team_4_stats_OTW_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_stats_OTL"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_4_stats_OTW_title"
+                android:layout_below="@id/tv_jsl_team_4_stats_OTL_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_stats_LOSSES"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_4_stats_OTL_title"
+                android:layout_below="@id/tv_jsl_team_4_stats_LOSSES_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_stats_POINTS"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_4_stats_LOSSES_title"
+                android:layout_below="@id/tv_jsl_team_4_stats_POINTS_title"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_stats_STREAK"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_jsl_team_4_stats_POINTS_title"
+                android:layout_below="@id/tv_jsl_team_4_stats_STREAK_title"/>
+
+            <!-- player stats titles(seperate tv's for each stat, sigh) -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_name"
+                android:textColor="#000000"
+                android:text="Name"
+                android:paddingTop="15dp"
+                android:paddingRight="75dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_pos"
+                android:textColor="#000000"
+                android:text="Pos"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_name"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_role"
+                android:textColor="#000000"
+                android:text="Role"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_pos"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_pts"
+                android:textColor="#000000"
+                android:text="Points"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_role"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_goals"
+                android:textColor="#000000"
+                android:text="Goals"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_pts"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_assists"
+                android:textColor="#000000"
+                android:text="Assists"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_goals"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_ppg"
+                android:textColor="#000000"
+                android:text="PPG"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_assists"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_plusmin"
+                android:textColor="#000000"
+                android:text="+ / -"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_ppg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_gwg"
+                android:textColor="#000000"
+                android:text="GWG"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_plusmin"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_goalperc"
+                android:textColor="#000000"
+                android:text="Goal %"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_gwg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_saves"
+                android:textColor="#000000"
+                android:text="Saves"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_goalperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_saveperc"
+                android:textColor="#000000"
+                android:text="Save %"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_saves"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_goalsagainst"
+                android:textColor="#000000"
+                android:text="GA"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_saveperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_goalsagainstavg"
+                android:textColor="#000000"
+                android:text="GAA"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_goalsagainst"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_gamesplayed"
+                android:textColor="#000000"
+                android:text="GP"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_goalsagainstavg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_gamesplayedasg"
+                android:textColor="#000000"
+                android:text="GP@G"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_gamesplayed"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_wins"
+                android:textColor="#000000"
+                android:text="Wins"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_gamesplayedasg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_title_shutouts"
+                android:textColor="#000000"
+                android:text="SO"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_jsl_team_4_roster"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_wins"/>
+
+            <!-- player stats variables -->
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_name"
+                android:textColor="#000000"
+                android:paddingRight="55dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_name"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_pos"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_pos"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_name"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_role"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_role"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_pos"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_pts"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_pts"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_role"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_goals"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_goals"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_pts"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_assists"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_assists"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_goals"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_ppg"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_ppg"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_assists"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_plusmin"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_plusmin"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_ppg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_gwg"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_jsl_team_4_player_stats_title_gwg"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_plusmin"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_goalperc"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_goalperc"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_gwg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_saves"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_saves"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_goalperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_saveperc"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_saveperc"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_saves"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_goalsagainst"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_goalsagainst"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_saveperc"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_goalsagainstavg"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_goalsagainstavg"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_goalsagainst"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_gamesplayed"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_gamesplayed"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_goalsagainstavg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_gamesplayedasg"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_gamesplayedasg"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_gamesplayed"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_wins"
+                android:textColor="#000000"
+                android:maxLines="10"
+                android:paddingRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_wins"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_gamesplayedasg"/>
+
+            <TextView
+                android:id="@+id/tv_jsl_team_4_player_stats_shutouts"
+                android:paddingRight="20dp"
+                android:maxLines="10"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_jsl_team_4_player_stats_title_shutouts"
+                android:layout_toRightOf="@id/tv_jsl_team_4_player_stats_title_wins"/>
+
+            <!-- end of team 4 -->
+        </RelativeLayout>
+    </HorizontalScrollView>
+</ScrollView>
+
