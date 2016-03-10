@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -107,7 +108,7 @@ public class LHLScheduleFragment extends Fragment {
                             if(!s_dateCheck.equals(ele.text()) && !ele.text().equals(""))
                             {
                                 newRow = true;
-                                i_gameCount = 1;
+                                i_gameCount = 0;
                             }
 
                             if(firstGame)
@@ -172,14 +173,14 @@ public class LHLScheduleFragment extends Fragment {
                         case 3: //time
                             if(firstGame || newRow)
                             {
-                                //new tv for time,  padding of 250 right
+                                //new tv for time,  padding of 300 right
                                 params[i_tvCount] = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
                                 array[i_tvCount] = new TextView(getActivity());
                                 array[i_tvCount].setTag(i_tvCount);
                                 array[i_tvCount].setId(i_tvCount);
                                 array[i_tvCount].setText(ele.text());
                                 array[i_tvCount].setTextColor(getResources().getColor(R.color.black));
-                                array[i_tvCount].setPadding(0, 0, 250, 0);
+                                array[i_tvCount].setPadding(0, 0, 325, 0);
 
                                 //add below day
                                 params[i_tvCount].addRule(RelativeLayout.BELOW, array[i_tvCount-1].getId());
@@ -192,7 +193,7 @@ public class LHLScheduleFragment extends Fragment {
                                 array[i_tvCount].setId(i_tvCount);
                                 array[i_tvCount].setText(ele.text());
                                 array[i_tvCount].setTextColor(getResources().getColor(R.color.black));
-                                array[i_tvCount].setPadding(0, 0, 250, 0);
+                                array[i_tvCount].setPadding(0, 0, 325, 0);
 
                                 //add below day and to the right of the old time
                                 if ((5 * i_gameCount + 1) - i_tvCount > 0)
@@ -270,7 +271,7 @@ public class LHLScheduleFragment extends Fragment {
                             array[i_tvCount].setText(ele.text());
                             array[i_tvCount].setTypeface(null, Typeface.BOLD);
                             array[i_tvCount].setTextColor(getResources().getColor(R.color.red));
-                            array[i_tvCount].setPadding(0, 0, 250, 0);
+                            array[i_tvCount].setPadding(0, 0, 325, 0);
 
                             //add below time and right of away
                             params[i_tvCount].addRule(RelativeLayout.BELOW, array[i_tvCount-3].getId()); //new time
@@ -290,7 +291,7 @@ public class LHLScheduleFragment extends Fragment {
                                 array[i_tvCount].setId(i_tvCount);
                                 array[i_tvCount].setText(ele.text());
                                 array[i_tvCount].setTextColor(getResources().getColor(R.color.black));
-                                array[i_tvCount].setPadding(0, 0, 250, 0);
+                                array[i_tvCount].setPadding(0, 0, 325, 50);
 
                                 //add below home team
                                 params[i_tvCount].addRule(RelativeLayout.BELOW, array[i_tvCount - 1].getId()); //home
@@ -306,7 +307,7 @@ public class LHLScheduleFragment extends Fragment {
                                 array[i_tvCount].setId(i_tvCount);
                                 array[i_tvCount].setText(ele.text());
                                 array[i_tvCount].setTextColor(getResources().getColor(R.color.black));
-                                array[i_tvCount].setPadding(0, 0, 250, 0);
+                                array[i_tvCount].setPadding(0,0,325,50);
                                 //add below home team
                                 params[i_tvCount].addRule(RelativeLayout.BELOW, array[i_tvCount-1].getId()); //home
                                 params[i_tvCount].addRule(RelativeLayout.ALIGN_BASELINE, array[i_tvCount-5].getId()); //home

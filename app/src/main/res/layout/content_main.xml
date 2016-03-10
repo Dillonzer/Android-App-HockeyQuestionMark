@@ -28,16 +28,37 @@
         android:layout_below="@id/iv_pancakelogo"
         android:paddingBottom="30dp"
         android:paddingTop="30dp"
-        android:text="Hello! This application was created by /u/Dillonzer on Reddit. My username in Hockey? is dildozer."
+        android:text="Welcome to the offical app of the Hockey? subreddit!"
         />
 
     <TextView
-        android:id="@+id/tv_main2"
+        android:id="@+id/links_title"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_below="@id/tv_main1"
-        android:paddingBottom ="30dp"
-        android:text="Anyways, hope you like this application. It took me about 2 weeks to build, and it might not be fool proof. So let me know if any bugs come up! (via reddit/steam or if you see me in game!)"
+        android:paddingBottom="15dp"
+        android:text="Links!"/>
+
+    <TextView
+        android:id="@+id/lhl_website_link"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/links_title"
+        android:paddingBottom ="5dp"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:text="www.legendshockeyleague.com"
+        />
+
+    <TextView
+        android:id="@+id/lhl_subreddit_link"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/lhl_website_link"
+        android:paddingBottom ="5dp"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:text="www.reddit.com/r/hockeyquestionmark"
         />
 
 
