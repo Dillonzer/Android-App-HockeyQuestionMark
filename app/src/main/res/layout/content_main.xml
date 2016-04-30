@@ -70,13 +70,15 @@
         android:layout_below="@id/lhl_subreddit_link"
         android:paddingBottom="15dp"
         android:textSize="15sp"
-        android:text="The season is over! Congratulations to LHL Edmonton Oilers, RSL team here and JSL Texas Stars!! Check for updates for the next season!"/>
+        android:visibility="visible"
+        android:text="The season is -nearly- over! Congratulations to LHL Edmonton Oilers and JSL Texas Stars!!"/>
 
     <ImageView
         android:id="@+id/iv_lhl_champ_team"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingRight="75dp"
+        android:visibility="visible"
         android:layout_below="@id/seasons_over"
         android:src="@mipmap/lhl_edm"/>
 
@@ -86,6 +88,7 @@
         android:layout_height="wrap_content"
         android:paddingRight="75dp"
         android:layout_below="@id/seasons_over"
+        android:visibility="gone"
         android:layout_toRightOf="@id/iv_lhl_champ_team"
         android:src="@mipmap/rsl_blaze"/>
 
@@ -95,6 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/iv_rsl_champ_team"
         android:layout_below="@id/seasons_over"
+        android:visibility="visible"
         android:src="@mipmap/jsl_texas"/>
 
 
