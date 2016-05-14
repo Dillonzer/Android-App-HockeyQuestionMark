@@ -39,6 +39,8 @@ public class RSLRosterFragment extends Fragment {
     }
 
     private class JsoupRun extends AsyncTask<Void, Void, Void> {
+        final int TEAM_TD_SIZE = 160; // used to count the amount of tds to skip so we can count the next team
+        final int NUMBER_OF_PLAYERS = 8; //num of players
         String url = "https://sites.google.com/site/hockeyquestionmarkapp/RSLRoster";
         Elements td;
         Elements tr;
@@ -136,7 +138,7 @@ public class RSLRosterFragment extends Fragment {
                         if(tdcount >= 6)
                         {
 
-                            if(teamDone && maxPlayer < 8)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {
@@ -330,10 +332,10 @@ public class RSLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + 160))
+                        if(tdcount >= (6 + TEAM_TD_SIZE))
                         {
 
-                            if(teamDone && maxPlayer < 8)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {
@@ -527,10 +529,10 @@ public class RSLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + 160 + 160))//when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE * 2)))//when the team starts
                         {
 
-                            if(teamDone && maxPlayer < 8)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {
@@ -726,10 +728,10 @@ public class RSLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + (160*3)))//when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*3)))//when the team starts
                         {
 
-                            if(teamDone && maxPlayer < 8)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {
@@ -923,10 +925,10 @@ public class RSLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + (160*4)))//when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*4)))//when the team starts
                         {
 
-                            if(teamDone && maxPlayer < 8)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {
@@ -1121,10 +1123,10 @@ public class RSLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + (160*5))) //when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*5))) //when the team starts
                         {
 
-                            if(teamDone && maxPlayer < 8)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {

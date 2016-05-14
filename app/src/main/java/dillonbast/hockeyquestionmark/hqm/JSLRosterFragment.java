@@ -18,9 +18,6 @@ import android.app.Fragment;
 
 /**
  * Created by Dillon on 2016-02-08.
- * The 198 in JSL and 168 in LHL and 157(ithink) in RSL refer to how many TDS 1 team contains.
- * I use this to skip teams to find them in the DOM. Will be creating a constant in the next version.
- * Also will be creating a MAX_PLAYER constant, along with some others..
  */
 public class JSLRosterFragment extends Fragment {
     ProgressDialog mProgressDialog;
@@ -42,6 +39,8 @@ public class JSLRosterFragment extends Fragment {
     }
 
     private class JsoupRun extends AsyncTask<Void, Void, Void> {
+        final int TEAM_TD_SIZE = 160; // used to count the amount of tds to skip so we can count the next team
+        final int NUMBER_OF_PLAYERS = 8; //num of players
         String url = "https://sites.google.com/site/hockeyquestionmarkapp/JSLRoster";
         Elements td;
         Elements tr;
@@ -127,6 +126,7 @@ public class JSLRosterFragment extends Fragment {
             int teamCount = 0;
             int rosterCount = 0;
             int maxPlayer = 0;
+
             boolean teamDone = false;
             //THE TD STARTS AT COUNT = 6
             //TR STARTS AT COUNT = 5
@@ -139,7 +139,7 @@ public class JSLRosterFragment extends Fragment {
                         if(tdcount >= 6)
                         {
 
-                            if(teamDone && maxPlayer < 10)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {
@@ -333,10 +333,10 @@ public class JSLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + 198))
+                        if(tdcount >= (6 + TEAM_TD_SIZE))
                         {
 
-                            if(teamDone && maxPlayer < 10)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {
@@ -530,10 +530,10 @@ public class JSLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + 198 + 198))//when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE * 2)))//when the team starts
                         {
 
-                            if(teamDone && maxPlayer < 10)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {
@@ -727,10 +727,10 @@ public class JSLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + (198*3)))//when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*3)))//when the team starts
                         {
 
-                            if(teamDone && maxPlayer < 10)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {
@@ -861,6 +861,401 @@ public class JSLRosterFragment extends Fragment {
             team4_player_gpag.setText(t4_player_gpag);
             team4_player_wins.setText(t4_player_wins);
             team4_player_so.setText(t4_player_so);
+
+//team
+            TextView team5_name = (TextView) getView().findViewById(R.id.tv_jsl_team_5_roster);
+            TextView team5_gp = (TextView) getView().findViewById(R.id.tv_jsl_team_5_stats_gp);
+            TextView team5_wins = (TextView) getView().findViewById(R.id.tv_jsl_team_5_stats_wins);
+            TextView team5_otw = (TextView) getView().findViewById(R.id.tv_jsl_team_5_stats_OTW);
+            TextView team5_otl = (TextView) getView().findViewById(R.id.tv_jsl_team_5_stats_OTL);
+            TextView team5_losses = (TextView) getView().findViewById(R.id.tv_jsl_team_5_stats_LOSSES);
+            TextView team5_pts = (TextView) getView().findViewById(R.id.tv_jsl_team_5_stats_POINTS);
+            TextView team5_streak = (TextView) getView().findViewById(R.id.tv_jsl_team_5_stats_STREAK);
+
+//players
+            String t5_player_name="";
+            String t5_player_pos="";
+            String t5_player_role="";
+            String t5_player_points="";
+            String t5_player_goals="";
+            String t5_player_assis="";
+            String t5_player_ppg="";
+            String t5_player_plmi="";
+            String t5_player_gwg="";
+            String t5_player_gperc="";
+            String t5_player_saves="";
+            String t5_player_saveperc="";
+            String t5_player_ga="";
+            String t5_player_gaa="";
+            String t5_player_gp="";
+            String t5_player_gpag="";
+            String t5_player_wins="";
+            String t5_player_so="";
+
+            TextView team5_player_name = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_name);
+            TextView team5_player_pos = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_pos);
+            TextView team5_player_role = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_role);
+            TextView team5_player_points = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_pts);
+            TextView team5_player_goals = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_goals);
+            TextView team5_player_assis = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_assists);
+            TextView team5_player_ppg = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_ppg);
+            TextView team5_player_plmi = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_plusmin);
+            TextView team5_player_gwg = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_gwg);
+            TextView team5_player_gperc = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_goalperc);
+            TextView team5_player_saves = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_saves);
+            TextView team5_player_saveperc = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_saveperc);
+            TextView team5_player_ga = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_goalsagainst);
+            TextView team5_player_gaa = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_goalsagainstavg);
+            TextView team5_player_gp = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_gamesplayed);
+            TextView team5_player_gpag = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_gamesplayedasg);
+            TextView team5_player_wins = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_wins);
+            TextView team5_player_so = (TextView) getView().findViewById(R.id.tv_jsl_team_5_player_stats_shutouts);
+            trcount = 0;
+            tdcount = 0;
+            teamCount = 0;
+            rosterCount = 0;
+            maxPlayer = 0;
+            teamDone = false;
+            //THE TD STARTS AT COUNT = 6
+            //TR STARTS AT COUNT = 5
+            for(Element temp : tr)
+            {
+                if (trcount == 5) //found data table
+                {
+                    for (Element ele : td)
+                    {
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*4)))//when the team starts
+                        {
+
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
+                            {
+                                switch(rosterCount)
+                                {
+                                    case 0:
+                                        t5_player_name += ele.html() + "\n";
+                                        break;
+                                    case 2:
+                                        t5_player_pos += ele.html() + "\n";
+                                        break;
+                                    case 3:
+                                        t5_player_role += ele.html() + "\n";
+                                        break;
+                                    case 4:
+                                        t5_player_points += ele.html() + "\n";
+                                        break;
+                                    case 5:
+                                        t5_player_goals += ele.html() + "\n";
+                                        break;
+                                    case 6:
+                                        t5_player_assis += ele.html() + "\n";
+                                        break;
+                                    case 7:
+                                        t5_player_ppg += ele.html() + "\n";
+                                        break;
+                                    case 8:
+                                        t5_player_plmi += ele.html() + "\n";
+                                        break;
+                                    case 9:
+                                        t5_player_gwg += ele.html() + "\n";
+                                        break;
+                                    case 10:
+                                        t5_player_gperc += ele.html() + "\n";
+                                        break;
+                                    case 11:
+                                        t5_player_saves += ele.html() + "\n";
+                                        break;
+                                    case 12:
+                                        t5_player_saveperc += ele.html() + "\n";
+                                        break;
+                                    case 13:
+                                        t5_player_ga += ele.html() + "\n";
+                                        break;
+                                    case 14:
+                                        t5_player_gaa += ele.html() + "\n";
+                                        break;
+                                    case 15:
+                                        t5_player_gp += ele.html() + "\n";
+                                        break;
+                                    case 16:
+                                        t5_player_gpag += ele.html() + "\n";
+                                        break;
+                                    case 17:
+                                        t5_player_wins += ele.html() + "\n";
+                                        break;
+                                    case 18:
+                                        t5_player_so += ele.html() + "\n";
+                                        break;
+                                    case 19:
+                                        break;
+                                    default:
+                                        break;
+                                }
+
+                                if(rosterCount < 18)
+                                    rosterCount++;
+                                else {
+                                    rosterCount = 0;
+                                    maxPlayer++;
+                                }
+                            } else
+                            {
+                                switch (teamCount)
+                                {
+                                    case 0:
+                                        team5_name.setText(ele.html());
+                                        break;
+                                    case 1:
+                                        team5_gp.setText(ele.html());
+                                        break;
+                                    case 2:
+                                        team5_wins.setText(ele.html());
+                                        break;
+                                    case 3:
+                                        team5_otw.setText(ele.html());
+                                        break;
+                                    case 4:
+                                        team5_otl.setText(ele.html());
+                                        break;
+                                    case 5:
+                                        team5_losses.setText(ele.html());
+                                        break;
+                                    case 6:
+                                        team5_pts.setText(ele.html());
+                                        break;
+                                    case 7:
+                                        team5_streak.setText(ele.html());
+                                        teamDone = true;
+                                        break;
+                                    default:
+                                        break;
+
+                                }
+                                teamCount++;
+                            }
+
+                        }
+                        tdcount++;
+                    }
+                }
+                trcount++;
+            }
+
+
+            //now set values
+            team5_player_name.setText(t5_player_name);
+            team5_player_pos.setText(t5_player_pos);
+            team5_player_role.setText(t5_player_role);
+            team5_player_points.setText(t5_player_points);
+            team5_player_goals.setText(t5_player_goals);
+            team5_player_assis.setText(t5_player_assis);
+            team5_player_ppg.setText(t5_player_ppg);
+            team5_player_plmi.setText(t5_player_plmi);
+            team5_player_gwg.setText(t5_player_gwg);
+            team5_player_gperc.setText(t5_player_gperc);
+            team5_player_saves.setText(t5_player_saves);
+            team5_player_saveperc.setText(t5_player_saveperc);
+            team5_player_ga.setText(t5_player_ga);
+            team5_player_gaa.setText(t5_player_gaa);
+            team5_player_gp.setText(t5_player_gp);
+            team5_player_gpag.setText(t5_player_gpag);
+            team5_player_wins.setText(t5_player_wins);
+            team5_player_so.setText(t5_player_so);
+            //team
+            TextView team6_name = (TextView) getView().findViewById(R.id.tv_jsl_team_6_roster);
+            TextView team6_gp = (TextView) getView().findViewById(R.id.tv_jsl_team_6_stats_gp);
+            TextView team6_wins = (TextView) getView().findViewById(R.id.tv_jsl_team_6_stats_wins);
+            TextView team6_otw = (TextView) getView().findViewById(R.id.tv_jsl_team_6_stats_OTW);
+            TextView team6_otl = (TextView) getView().findViewById(R.id.tv_jsl_team_6_stats_OTL);
+            TextView team6_losses = (TextView) getView().findViewById(R.id.tv_jsl_team_6_stats_LOSSES);
+            TextView team6_pts = (TextView) getView().findViewById(R.id.tv_jsl_team_6_stats_POINTS);
+            TextView team6_streak = (TextView) getView().findViewById(R.id.tv_jsl_team_6_stats_STREAK);
+
+//players
+            String t6_player_name="";
+            String t6_player_pos="";
+            String t6_player_role="";
+            String t6_player_points="";
+            String t6_player_goals="";
+            String t6_player_assis="";
+            String t6_player_ppg="";
+            String t6_player_plmi="";
+            String t6_player_gwg="";
+            String t6_player_gperc="";
+            String t6_player_saves="";
+            String t6_player_saveperc="";
+            String t6_player_ga="";
+            String t6_player_gaa="";
+            String t6_player_gp="";
+            String t6_player_gpag="";
+            String t6_player_wins="";
+            String t6_player_so="";
+
+            TextView team6_player_name = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_name);
+            TextView team6_player_pos = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_pos);
+            TextView team6_player_role = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_role);
+            TextView team6_player_points = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_pts);
+            TextView team6_player_goals = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_goals);
+            TextView team6_player_assis = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_assists);
+            TextView team6_player_ppg = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_ppg);
+            TextView team6_player_plmi = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_plusmin);
+            TextView team6_player_gwg = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_gwg);
+            TextView team6_player_gperc = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_goalperc);
+            TextView team6_player_saves = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_saves);
+            TextView team6_player_saveperc = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_saveperc);
+            TextView team6_player_ga = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_goalsagainst);
+            TextView team6_player_gaa = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_goalsagainstavg);
+            TextView team6_player_gp = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_gamesplayed);
+            TextView team6_player_gpag = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_gamesplayedasg);
+            TextView team6_player_wins = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_wins);
+            TextView team6_player_so = (TextView) getView().findViewById(R.id.tv_jsl_team_6_player_stats_shutouts);
+            trcount = 0;
+            tdcount = 0;
+            teamCount = 0;
+            rosterCount = 0;
+            maxPlayer = 0;
+            teamDone = false;
+            //THE TD STARTS AT COUNT = 6
+            //TR STARTS AT COUNT = 5
+            for(Element temp : tr)
+            {
+                if (trcount == 5) //found data table
+                {
+                    for (Element ele : td)
+                    {
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*5))) //when the team starts
+                        {
+
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
+                            {
+                                switch(rosterCount)
+                                {
+                                    case 0:
+                                        t6_player_name += ele.html() + "\n";
+                                        break;
+                                    case 2:
+                                        t6_player_pos += ele.html() + "\n";
+                                        break;
+                                    case 3:
+                                        t6_player_role += ele.html() + "\n";
+                                        break;
+                                    case 4:
+                                        t6_player_points += ele.html() + "\n";
+                                        break;
+                                    case 5:
+                                        t6_player_goals += ele.html() + "\n";
+                                        break;
+                                    case 6:
+                                        t6_player_assis += ele.html() + "\n";
+                                        break;
+                                    case 7:
+                                        t6_player_ppg += ele.html() + "\n";
+                                        break;
+                                    case 8:
+                                        t6_player_plmi += ele.html() + "\n";
+                                        break;
+                                    case 9:
+                                        t6_player_gwg += ele.html() + "\n";
+                                        break;
+                                    case 10:
+                                        t6_player_gperc += ele.html() + "\n";
+                                        break;
+                                    case 11:
+                                        t6_player_saves += ele.html() + "\n";
+                                        break;
+                                    case 12:
+                                        t6_player_saveperc += ele.html() + "\n";
+                                        break;
+                                    case 13:
+                                        t6_player_ga += ele.html() + "\n";
+                                        break;
+                                    case 14:
+                                        t6_player_gaa += ele.html() + "\n";
+                                        break;
+                                    case 15:
+                                        t6_player_gp += ele.html() + "\n";
+                                        break;
+                                    case 16:
+                                        t6_player_gpag += ele.html() + "\n";
+                                        break;
+                                    case 17:
+                                        t6_player_wins += ele.html() + "\n";
+                                        break;
+                                    case 18:
+                                        t6_player_so += ele.html() + "\n";
+                                        break;
+                                    default:
+                                        break;
+                                }
+
+                                if(rosterCount < 18)
+                                    rosterCount++;
+                                else {
+                                    rosterCount = 0;
+                                    maxPlayer++;
+                                }
+                            } else
+                            {
+                                switch (teamCount)
+                                {
+                                    case 0:
+                                        team6_name.setText(ele.html());
+                                        break;
+                                    case 1:
+                                        team6_gp.setText(ele.html());
+                                        break;
+                                    case 2:
+                                        team6_wins.setText(ele.html());
+                                        break;
+                                    case 3:
+                                        team6_otw.setText(ele.html());
+                                        break;
+                                    case 4:
+                                        team6_otl.setText(ele.html());
+                                        break;
+                                    case 5:
+                                        team6_losses.setText(ele.html());
+                                        break;
+                                    case 6:
+                                        team6_pts.setText(ele.html());
+                                        break;
+                                    case 7:
+                                        team6_streak.setText(ele.html());
+                                        teamDone = true;
+                                        break;
+                                    default:
+                                        break;
+
+                                }
+                                teamCount++;
+                            }
+
+                        }
+                        tdcount++;
+                    }
+                }
+                trcount++;
+            }
+
+
+            //now set values
+            team6_player_name.setText(t6_player_name);
+            team6_player_pos.setText(t6_player_pos);
+            team6_player_role.setText(t6_player_role);
+            team6_player_points.setText(t6_player_points);
+            team6_player_goals.setText(t6_player_goals);
+            team6_player_assis.setText(t6_player_assis);
+            team6_player_ppg.setText(t6_player_ppg);
+            team6_player_plmi.setText(t6_player_plmi);
+            team6_player_gwg.setText(t6_player_gwg);
+            team6_player_gperc.setText(t6_player_gperc);
+            team6_player_saves.setText(t6_player_saves);
+            team6_player_saveperc.setText(t6_player_saveperc);
+            team6_player_ga.setText(t6_player_ga);
+            team6_player_gaa.setText(t6_player_gaa);
+            team6_player_gp.setText(t6_player_gp);
+            team6_player_gpag.setText(t6_player_gpag);
+            team6_player_wins.setText(t6_player_wins);
+            team6_player_so.setText(t6_player_so);
 
             mProgressDialog.dismiss();
         }

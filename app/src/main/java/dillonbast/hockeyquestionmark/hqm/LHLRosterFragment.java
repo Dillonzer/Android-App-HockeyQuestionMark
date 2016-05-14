@@ -39,6 +39,8 @@ public class LHLRosterFragment extends Fragment {
     }
 
     private class JsoupRun extends AsyncTask<Void, Void, Void> {
+        final int TEAM_TD_SIZE = 168; // used to count the amount of tds to skip so we can count the next team
+        final int NUMBER_OF_PLAYERS = 8; //num of players
         String url = "https://sites.google.com/site/hockeyquestionmarkapp/LHLRoster";
         Elements td;
         Elements tr;
@@ -138,7 +140,7 @@ public class LHLRosterFragment extends Fragment {
                         if(tdcount >= 6)
                         {
 
-                            if(teamDone && maxPlayer < 8)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {
@@ -338,10 +340,10 @@ public class LHLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + 168))
+                        if(tdcount >= (6 + TEAM_TD_SIZE))
                         {
 
-                            if(teamDone && maxPlayer < 8)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {
@@ -541,10 +543,10 @@ public class LHLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + 168 + 168))//when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*2)))//when the team starts
                         {
 
-                            if(teamDone && maxPlayer < 8)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {
@@ -744,10 +746,10 @@ public class LHLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + (168*3)))//when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*3)))//when the team starts
                         {
 
-                            if(teamDone && maxPlayer < 8)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {
@@ -947,10 +949,10 @@ public class LHLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + (168*4)))//when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*4)))//when the team starts
                         {
 
-                            if(teamDone && maxPlayer < 8)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {
@@ -1149,10 +1151,10 @@ public class LHLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + (168*5))) //when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*5))) //when the team starts
                         {
 
-                            if(teamDone && maxPlayer < 8)
+                            if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
                             {
                                 switch(rosterCount)
                                 {

@@ -197,7 +197,7 @@
                 android:textColor="#000000"
                 android:text="Name"
                 android:paddingTop="15dp"
-                android:paddingRight="75dp"
+                android:paddingRight="98dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_lhl_team_1_roster"/>
@@ -758,7 +758,7 @@
                 android:textColor="#000000"
                 android:text="Name"
                 android:paddingTop="15dp"
-                android:paddingRight="75dp"
+                android:paddingRight="98dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_lhl_team_2_roster"/>
@@ -1334,7 +1334,7 @@
                 android:textColor="#000000"
                 android:text="Name"
                 android:paddingTop="15dp"
-                android:paddingRight="75dp"
+                android:paddingRight="98dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="visible"
@@ -1932,7 +1932,7 @@
                 android:textColor="#000000"
                 android:text="Name"
                 android:paddingTop="15dp"
-                android:paddingRight="75dp"
+                android:paddingRight="98dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_lhl_team_4_roster"/>
@@ -2492,7 +2492,7 @@
                 android:textColor="#000000"
                 android:text="Name"
                 android:paddingTop="15dp"
-                android:paddingRight="75dp"
+                android:paddingRight="98dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_lhl_team_5_roster"/>
@@ -3068,7 +3068,7 @@
                 android:textColor="#000000"
                 android:text="Name"
                 android:paddingTop="15dp"
-                android:paddingRight="75dp"
+                android:paddingRight="98dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="visible"

@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_below="@id/tv_main1"
         android:paddingBottom="30dp"
-        android:text="This app is current to Season 11 LHL, Season 10 RSL, and Season 2 JSL."
+        android:text="This app is current to Season 11 LHL, Season 10 RSL, and Season 3 JSL."
         />
 
     <TextView
