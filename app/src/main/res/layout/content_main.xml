@@ -69,8 +69,13 @@
         android:layout_below="@id/lhl_subreddit_link"
         android:paddingBottom="15dp"
         android:textSize="15sp"
+<<<<<<< HEAD
         android:visibility="gone"
         android:text="The season is over! Congratulations to "/>
+=======
+        android:visibility="visible"
+        android:text="The season is over! Congratulations to LHL Edmonton Oilers, RSL Ontario Reign, and JSL Texas Stars on their respective cup wins!!"/>
+>>>>>>> refs/remotes/origin/master
 
     <ImageView
         android:id="@+id/iv_lhl_champ_team"
@@ -87,9 +92,9 @@
         android:layout_height="wrap_content"
         android:paddingRight="75dp"
         android:layout_below="@id/seasons_over"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_toRightOf="@id/iv_lhl_champ_team"
-        android:src="@mipmap/rsl_blaze"/>
+        android:src="@mipmap/rsl_reign"/>
 
     <ImageView
         android:id="@+id/iv_jsl_champ_team"
