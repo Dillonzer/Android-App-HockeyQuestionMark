@@ -28,33 +28,32 @@
         android:layout_below="@id/iv_pancakelogo"
         android:paddingBottom="30dp"
         android:paddingTop="30dp"
-        android:text="Welcome to the official app of the Hockey? subreddit!"
+        android:text="Welcome to the official app of the Hockey? subreddit! If you have any suggestions, please PM me on Reddit. (/u/Dillonzer)"
+        />
+
+    <TextView
+        android:id="@+id/tv_main2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tv_main1"
+        android:paddingBottom="30dp"
+        android:text="This app is current to Season 11 LHL, Season 10 RSL, and Season 2 JSL."
         />
 
     <TextView
         android:id="@+id/links_title"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_below="@id/tv_main1"
+        android:layout_below="@id/tv_main2"
         android:paddingBottom="15dp"
         android:text="Links!"/>
 
-    <TextView
-        android:id="@+id/lhl_website_link"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_below="@id/links_title"
-        android:paddingBottom ="5dp"
-        android:autoLink="web"
-        android:linksClickable="true"
-        android:text="www.legendshockeyleague.com"
-        />
 
     <TextView
         android:id="@+id/lhl_subreddit_link"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_below="@id/lhl_website_link"
+        android:layout_below="@id/links_title"
         android:paddingBottom ="15dp"
         android:autoLink="web"
         android:linksClickable="true"
@@ -70,15 +69,15 @@
         android:layout_below="@id/lhl_subreddit_link"
         android:paddingBottom="15dp"
         android:textSize="15sp"
-        android:visibility="visible"
-        android:text="The season is -nearly- over! Congratulations to LHL Edmonton Oilers and JSL Texas Stars!!"/>
+        android:visibility="gone"
+        android:text="The season is over! Congratulations to "/>
 
     <ImageView
         android:id="@+id/iv_lhl_champ_team"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingRight="75dp"
-        android:visibility="visible"
+        android:visibility="gone"
         android:layout_below="@id/seasons_over"
         android:src="@mipmap/lhl_edm"/>
 
@@ -98,7 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/iv_rsl_champ_team"
         android:layout_below="@id/seasons_over"
-        android:visibility="visible"
+        android:visibility="gone"
         android:src="@mipmap/jsl_texas"/>
 
 

@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/rsl_pirates"
+                android:src="@mipmap/rsl_sharks"
                 android:layout_below="@id/tv_rsl_roster_title" />
 
             <TextView
@@ -578,7 +578,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/rsl_blaze"
+                android:src="@mipmap/rsl_rivermen"
                 android:layout_below="@id/tv_rsl_team_1_player_stats_name" />
 
             <TextView
@@ -1117,7 +1117,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/rsl_rabbits"
+                android:src="@mipmap/rsl_chill"
                 android:layout_below="@id/tv_rsl_team_2_player_stats_name" />
 
             <TextView
@@ -1657,7 +1657,7 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
                 android:src="@mipmap/rsl_moose"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_3_player_stats_name" />
 
             <TextView
@@ -1667,7 +1667,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_3_player_stats_name"/>
 
             <!-- team stats (seperate tv's for each stat, sigh) -->
@@ -1681,7 +1681,7 @@
                 android:paddingLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/iv_rsl_team_4_roster"
                 android:layout_below="@id/tv_rsl_team_4_roster"/>
 
@@ -1693,7 +1693,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/tv_rsl_team_4_stats_gp_title"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_4_roster"/>
 
             <TextView
@@ -1704,7 +1704,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/tv_rsl_team_4_stats_wins_title"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_4_roster"/>
 
             <TextView
@@ -1715,7 +1715,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/tv_rsl_team_4_stats_OTW_title"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_4_roster"/>
 
             <TextView
@@ -1726,7 +1726,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/tv_rsl_team_4_stats_OTL_title"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_4_roster"/>
 
             <TextView
@@ -1737,7 +1737,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/tv_rsl_team_4_stats_LOSSES_title"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_4_roster"/>
 
             <TextView
@@ -1748,7 +1748,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/tv_rsl_team_4_stats_POINTS_title"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_4_roster"/>
 
             <!-- variable team stats -->
@@ -1761,7 +1761,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_4_stats_gp_title"/>
 
             <TextView
@@ -1771,7 +1771,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/tv_rsl_team_4_stats_gp_title"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_4_stats_wins_title"/>
 
             <TextView
@@ -1781,7 +1781,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/tv_rsl_team_4_stats_wins_title"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_4_stats_OTW_title"/>
 
             <TextView
@@ -1791,7 +1791,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/tv_rsl_team_4_stats_OTW_title"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_4_stats_OTL_title"/>
 
             <TextView
@@ -1801,7 +1801,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/tv_rsl_team_4_stats_OTL_title"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_4_stats_LOSSES_title"/>
 
             <TextView
@@ -1811,7 +1811,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/tv_rsl_team_4_stats_LOSSES_title"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_4_stats_POINTS_title"/>
 
             <TextView
@@ -1821,7 +1821,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/tv_rsl_team_4_stats_POINTS_title"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_4_stats_STREAK_title"/>
 
             <!-- player stats titles(seperate tv's for each stat, sigh) -->
@@ -1834,7 +1834,7 @@
                 android:paddingRight="75dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/iv_rsl_team_4_roster"/>
 
             <TextView
@@ -1846,7 +1846,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_name"/>
 
             <TextView
@@ -1858,7 +1858,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_pos"/>
 
             <TextView
@@ -1870,7 +1870,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_role"/>
 
             <TextView
@@ -1882,7 +1882,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_pts"/>
 
             <TextView
@@ -1894,7 +1894,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_goals"/>
 
             <TextView
@@ -1906,7 +1906,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_assists"/>
 
             <TextView
@@ -1918,7 +1918,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_ppg"/>
 
             <TextView
@@ -1930,7 +1930,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_plusmin"/>
 
             <TextView
@@ -1942,7 +1942,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_gwg"/>
 
             <TextView
@@ -1954,7 +1954,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_goalperc"/>
 
             <TextView
@@ -1966,7 +1966,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_saves"/>
 
             <TextView
@@ -1978,7 +1978,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_saveperc"/>
 
             <TextView
@@ -1990,7 +1990,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_goalsagainst"/>
 
             <TextView
@@ -2002,7 +2002,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_goalsagainstavg"/>
 
             <TextView
@@ -2014,7 +2014,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_gamesplayed"/>
 
             <TextView
@@ -2026,7 +2026,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_gamesplayedasg"/>
 
             <TextView
@@ -2038,7 +2038,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_rsl_team_4_roster"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_wins"/>
 
             <!-- player stats variables -->
@@ -2050,7 +2050,7 @@
                 android:maxLines="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_name"/>
 
             <TextView
@@ -2061,7 +2061,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_pos"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_name"/>
 
             <TextView
@@ -2072,7 +2072,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_role"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_pos"/>
 
             <TextView
@@ -2083,7 +2083,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_pts"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_role"/>
 
             <TextView
@@ -2094,7 +2094,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_goals"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_pts"/>
 
             <TextView
@@ -2105,7 +2105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_assists"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_goals"/>
 
             <TextView
@@ -2116,7 +2116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_ppg"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_assists"/>
 
             <TextView
@@ -2127,7 +2127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_plusmin"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_ppg"/>
 
             <TextView
@@ -2138,7 +2138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_rsl_team_4_player_stats_title_gwg"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_plusmin"/>
 
             <TextView
@@ -2149,7 +2149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_goalperc"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_gwg"/>
 
             <TextView
@@ -2160,7 +2160,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_saves"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_goalperc"/>
 
             <TextView
@@ -2171,7 +2171,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_saveperc"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_saves"/>
 
             <TextView
@@ -2182,7 +2182,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_goalsagainst"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_saveperc"/>
 
             <TextView
@@ -2193,7 +2193,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_goalsagainstavg"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_goalsagainst"/>
 
             <TextView
@@ -2204,7 +2204,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_gamesplayed"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_goalsagainstavg"/>
 
             <TextView
@@ -2215,7 +2215,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_gamesplayedasg"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_gamesplayed"/>
 
             <TextView
@@ -2226,7 +2226,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_wins"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_gamesplayedasg"/>
 
             <TextView
@@ -2237,7 +2237,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_title_shutouts"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_toRightOf="@id/tv_rsl_team_4_player_stats_title_wins"/>
 
             <!-- end of team 4 -->
@@ -2247,7 +2247,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/rsl_moose"
+                android:src="@mipmap/rsl_v"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_name" />
 
             <TextView
@@ -2786,7 +2786,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/rsl_wolves"
+                android:src="@mipmap/rsl_whalers"
                 android:layout_below="@id/tv_rsl_team_5_player_stats_name" />
 
             <TextView
@@ -3321,1137 +3321,7 @@
 
 
             <!-- end of team 6 -->
-            <!-- start of team 7-->
-            <ImageView
-                android:id="@+id/iv_rsl_team_7_roster"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:src="@mipmap/rsl_reign"
-                android:layout_below="@id/tv_rsl_team_6_player_stats_name" />
 
-            <TextView
-                android:id="@+id/tv_rsl_team_7_roster"
-                android:textColor="#000000"
-                android:paddingLeft="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/iv_rsl_team_7_roster"
-                android:layout_below="@id/tv_rsl_team_6_player_stats_name"/>
-
-            <!-- team stats (seperate tv's for each stat, sigh) -->
-            <!-- GP - WINS - OTW - OTL - LOSSES - POINTS - STREAK -->
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_stats_gp_title"
-                android:text="GP"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:paddingLeft="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/iv_rsl_team_7_roster"
-                android:layout_below="@id/tv_rsl_team_7_roster"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_stats_wins_title"
-                android:text="WINS"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_7_stats_gp_title"
-                android:layout_below="@id/tv_rsl_team_7_roster"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_stats_OTW_title"
-                android:text="OTW"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_7_stats_wins_title"
-                android:layout_below="@id/tv_rsl_team_7_roster"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_stats_OTL_title"
-                android:text="OTL"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_7_stats_OTW_title"
-                android:layout_below="@id/tv_rsl_team_7_roster"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_stats_LOSSES_title"
-                android:text="LOSSES"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_7_stats_OTL_title"
-                android:layout_below="@id/tv_rsl_team_7_roster"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_stats_POINTS_title"
-                android:text="POINTS"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_7_stats_LOSSES_title"
-                android:layout_below="@id/tv_rsl_team_7_roster"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_stats_STREAK_title"
-                android:text="STREAK"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_7_stats_POINTS_title"
-                android:layout_below="@id/tv_rsl_team_7_roster"/>
-
-            <!-- variable team stats -->
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_stats_gp"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:paddingLeft="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/iv_rsl_team_7_roster"
-                android:layout_below="@id/tv_rsl_team_7_stats_gp_title"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_stats_wins"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_7_stats_gp_title"
-                android:layout_below="@id/tv_rsl_team_7_stats_wins_title"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_stats_OTW"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_7_stats_wins_title"
-                android:layout_below="@id/tv_rsl_team_7_stats_OTW_title"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_stats_OTL"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_7_stats_OTW_title"
-                android:layout_below="@id/tv_rsl_team_7_stats_OTL_title"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_stats_LOSSES"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_7_stats_OTL_title"
-                android:layout_below="@id/tv_rsl_team_7_stats_LOSSES_title"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_stats_POINTS"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_7_stats_LOSSES_title"
-                android:layout_below="@id/tv_rsl_team_7_stats_POINTS_title"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_stats_STREAK"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_7_stats_POINTS_title"
-                android:layout_below="@id/tv_rsl_team_7_stats_STREAK_title"/>
-
-            <!-- player stats titles(seperate tv's for each stat, sigh) -->
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_name"
-                android:textColor="#000000"
-                android:text="Name"
-                android:paddingTop="15dp"
-                android:paddingRight="75dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_pos"
-                android:textColor="#000000"
-                android:text="Pos"
-                android:paddingTop="15dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_name"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_role"
-                android:textColor="#000000"
-                android:text="Role"
-                android:paddingTop="15dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_pos"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_pts"
-                android:textColor="#000000"
-                android:text="Points"
-                android:paddingTop="15dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_role"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_goals"
-                android:textColor="#000000"
-                android:text="Goals"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_pts"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_assists"
-                android:textColor="#000000"
-                android:text="Assists"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_goals"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_ppg"
-                android:textColor="#000000"
-                android:text="PPG"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_assists"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_plusmin"
-                android:textColor="#000000"
-                android:text="+ / -"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_ppg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_gwg"
-                android:textColor="#000000"
-                android:text="GWG"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_plusmin"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_goalperc"
-                android:textColor="#000000"
-                android:text="Goal %"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_gwg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_saves"
-                android:textColor="#000000"
-                android:text="Saves"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_goalperc"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_saveperc"
-                android:textColor="#000000"
-                android:text="Save %"
-                android:paddingTop="15dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_saves"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_goalsagainst"
-                android:textColor="#000000"
-                android:text="GA"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_saveperc"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_goalsagainstavg"
-                android:textColor="#000000"
-                android:text="GAA"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_goalsagainst"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_gamesplayed"
-                android:textColor="#000000"
-                android:text="GP"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_goalsagainstavg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_gamesplayedasg"
-                android:textColor="#000000"
-                android:text="GP@G"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_gamesplayed"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_wins"
-                android:textColor="#000000"
-                android:text="Wins"
-                android:paddingTop="15dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_gamesplayedasg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_title_shutouts"
-                android:textColor="#000000"
-                android:text="SO"
-                android:paddingTop="15dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_7_roster"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_wins"/>
-
-            <!-- player stats variables -->
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_name"
-                android:textColor="#000000"
-                android:paddingRight="55dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_name"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_pos"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_pos"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_name"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_role"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_role"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_pos"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_pts"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_pts"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_role"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_goals"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_goals"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_pts"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_assists"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_assists"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_goals"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_ppg"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_ppg"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_assists"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_plusmin"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_plusmin"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_ppg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_gwg"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_rsl_team_7_player_stats_title_gwg"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_plusmin"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_goalperc"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_goalperc"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_gwg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_saves"
-                android:textColor="#000000"
-                android:maxLines="10"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_saves"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_goalperc"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_saveperc"
-                android:textColor="#000000"
-                android:maxLines="10"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_saveperc"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_saves"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_goalsagainst"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_goalsagainst"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_saveperc"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_goalsagainstavg"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_goalsagainstavg"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_goalsagainst"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_gamesplayed"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_gamesplayed"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_goalsagainstavg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_gamesplayedasg"
-                android:textColor="#000000"
-                android:maxLines="10"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_gamesplayedasg"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_gamesplayed"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_wins"
-                android:textColor="#000000"
-                android:maxLines="10"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_wins"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_gamesplayedasg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_7_player_stats_shutouts"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:textColor="#000000"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_title_shutouts"
-                android:layout_toRightOf="@id/tv_rsl_team_7_player_stats_title_wins"/>
-
-            <!-- end of team 7 -->
-            <!-- start of team 8-->
-            <ImageView
-                android:id="@+id/iv_rsl_team_8_roster"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:src="@mipmap/rsl_reign"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_name" />
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_roster"
-                android:textColor="#000000"
-                android:paddingLeft="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_7_player_stats_name"/>
-
-            <!-- team stats (seperate tv's for each stat, sigh) -->
-            <!-- GP - WINS - OTW - OTL - LOSSES - POINTS - STREAK -->
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_stats_gp_title"
-                android:text="GP"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:paddingLeft="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_8_roster"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_stats_wins_title"
-                android:text="WINS"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_8_stats_gp_title"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_8_roster"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_stats_OTW_title"
-                android:text="OTW"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_8_stats_wins_title"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_8_roster"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_stats_OTL_title"
-                android:text="OTL"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_8_stats_OTW_title"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_8_roster"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_stats_LOSSES_title"
-                android:text="LOSSES"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_8_stats_OTL_title"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_8_roster"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_stats_POINTS_title"
-                android:text="POINTS"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_8_stats_LOSSES_title"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_8_roster"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_stats_STREAK_title"
-                android:text="STREAK"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_8_stats_POINTS_title"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_8_roster"/>
-
-            <!-- variable team stats -->
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_stats_gp"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:paddingLeft="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_8_stats_gp_title"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_stats_wins"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_8_stats_gp_title"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_8_stats_wins_title"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_stats_OTW"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_8_stats_wins_title"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_8_stats_OTW_title"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_stats_OTL"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_8_stats_OTW_title"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_8_stats_OTL_title"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_stats_LOSSES"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_8_stats_OTL_title"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_8_stats_LOSSES_title"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_stats_POINTS"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_8_stats_LOSSES_title"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_8_stats_POINTS_title"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_stats_STREAK"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_rsl_team_8_stats_POINTS_title"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_8_stats_STREAK_title"/>
-
-            <!-- player stats titles(seperate tv's for each stat, sigh) -->
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_name"
-                android:textColor="#000000"
-                android:text="Name"
-                android:paddingTop="15dp"
-                android:paddingRight="75dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:layout_below="@id/iv_rsl_team_8_roster"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_pos"
-                android:textColor="#000000"
-                android:text="Pos"
-                android:paddingTop="15dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_name"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_role"
-                android:textColor="#000000"
-                android:text="Role"
-                android:paddingTop="15dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_pos"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_pts"
-                android:textColor="#000000"
-                android:text="Points"
-                android:paddingTop="15dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_role"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_goals"
-                android:textColor="#000000"
-                android:text="Goals"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_pts"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_assists"
-                android:textColor="#000000"
-                android:text="Assists"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_goals"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_ppg"
-                android:textColor="#000000"
-                android:text="PPG"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_assists"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_plusmin"
-                android:textColor="#000000"
-                android:text="+ / -"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_ppg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_gwg"
-                android:textColor="#000000"
-                android:text="GWG"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_plusmin"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_goalperc"
-                android:textColor="#000000"
-                android:text="Goal %"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_gwg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_saves"
-                android:textColor="#000000"
-                android:text="Saves"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_goalperc"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_saveperc"
-                android:textColor="#000000"
-                android:text="Save %"
-                android:paddingTop="15dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_saves"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_goalsagainst"
-                android:textColor="#000000"
-                android:text="GA"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_saveperc"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_goalsagainstavg"
-                android:textColor="#000000"
-                android:text="GAA"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_goalsagainst"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_gamesplayed"
-                android:textColor="#000000"
-                android:text="GP"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_goalsagainstavg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_gamesplayedasg"
-                android:textColor="#000000"
-                android:text="GP@G"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_gamesplayed"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_wins"
-                android:textColor="#000000"
-                android:text="Wins"
-                android:paddingTop="15dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_gamesplayedasg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_title_shutouts"
-                android:textColor="#000000"
-                android:text="SO"
-                android:paddingTop="15dp"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_rsl_team_8_roster"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_wins"/>
-
-            <!-- player stats variables -->
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_name"
-                android:textColor="#000000"
-                android:paddingRight="55dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_name"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_pos"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_pos"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_name"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_role"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_role"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_pos"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_pts"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_pts"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_role"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_goals"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_goals"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_pts"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_assists"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_assists"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_goals"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_ppg"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_ppg"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_assists"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_plusmin"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_plusmin"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_ppg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_gwg"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_rsl_team_8_player_stats_title_gwg"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_plusmin"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_goalperc"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_goalperc"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_gwg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_saves"
-                android:textColor="#000000"
-                android:maxLines="10"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_saves"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_goalperc"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_saveperc"
-                android:textColor="#000000"
-                android:maxLines="10"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_saveperc"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_saves"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_goalsagainst"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_goalsagainst"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_saveperc"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_goalsagainstavg"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_goalsagainstavg"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_goalsagainst"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_gamesplayed"
-                android:textColor="#000000"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_gamesplayed"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_goalsagainstavg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_gamesplayedasg"
-                android:textColor="#000000"
-                android:maxLines="10"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_gamesplayedasg"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_gamesplayed"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_wins"
-                android:textColor="#000000"
-                android:maxLines="10"
-                android:paddingRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_wins"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_gamesplayedasg"/>
-
-            <TextView
-                android:id="@+id/tv_rsl_team_8_player_stats_shutouts"
-                android:paddingRight="20dp"
-                android:maxLines="10"
-                android:textColor="#000000"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_rsl_team_8_player_stats_title_shutouts"
-                android:visibility="gone"
-                android:layout_toRightOf="@id/tv_rsl_team_8_player_stats_title_wins"/>
-
-
-            <!-- end of team 8 -->
 
         </RelativeLayout>
     </HorizontalScrollView>
