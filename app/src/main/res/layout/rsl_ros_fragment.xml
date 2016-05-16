@@ -2247,7 +2247,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/rsl_v"
+                android:src="@mipmap/rsl_pens"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_name" />
 
             <TextView
