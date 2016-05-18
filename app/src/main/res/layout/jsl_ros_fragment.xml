@@ -198,7 +198,7 @@
                 android:textColor="#000000"
                 android:text="Name"
                 android:paddingTop="15dp"
-                android:paddingRight="75dp"
+                android:paddingRight="90dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_jsl_team_1_roster"/>
@@ -395,7 +395,7 @@
             <TextView
                 android:id="@+id/tv_jsl_team_1_player_stats_name"
                 android:textColor="#000000"
-                android:paddingRight="55dp"
+                android:paddingRight="90dp"
                 android:maxLines="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -739,7 +739,7 @@
                 android:textColor="#000000"
                 android:text="Name"
                 android:paddingTop="15dp"
-                android:paddingRight="75dp"
+                android:paddingRight="90dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_jsl_team_2_roster"/>
@@ -936,7 +936,7 @@
             <TextView
                 android:id="@+id/tv_jsl_team_2_player_stats_name"
                 android:textColor="#000000"
-                android:paddingRight="55dp"
+                android:paddingRight="90dp"
                 android:maxLines="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1279,7 +1279,7 @@
                 android:textColor="#000000"
                 android:text="Name"
                 android:paddingTop="15dp"
-                android:paddingRight="75dp"
+                android:paddingRight="90dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_jsl_team_3_roster"/>
@@ -1476,7 +1476,7 @@
             <TextView
                 android:id="@+id/tv_jsl_team_3_player_stats_name"
                 android:textColor="#000000"
-                android:paddingRight="55dp"
+                android:paddingRight="90dp"
                 android:maxLines="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1819,7 +1819,7 @@
                 android:textColor="#000000"
                 android:text="Name"
                 android:paddingTop="15dp"
-                android:paddingRight="75dp"
+                android:paddingRight="90dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_jsl_team_4_roster"/>
@@ -2016,7 +2016,7 @@
             <TextView
                 android:id="@+id/tv_jsl_team_4_player_stats_name"
                 android:textColor="#000000"
-                android:paddingRight="55dp"
+                android:paddingRight="90dp"
                 android:maxLines="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -2359,7 +2359,7 @@
                 android:textColor="#000000"
                 android:text="Name"
                 android:paddingTop="15dp"
-                android:paddingRight="75dp"
+                android:paddingRight="90dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_jsl_team_5_roster"/>
@@ -2556,7 +2556,7 @@
             <TextView
                 android:id="@+id/tv_jsl_team_5_player_stats_name"
                 android:textColor="#000000"
-                android:paddingRight="55dp"
+                android:paddingRight="90dp"
                 android:maxLines="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -2898,7 +2898,7 @@
                 android:textColor="#000000"
                 android:text="Name"
                 android:paddingTop="15dp"
-                android:paddingRight="75dp"
+                android:paddingRight="90dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_jsl_team_6_roster"/>
@@ -3096,7 +3096,7 @@
             <TextView
                 android:id="@+id/tv_jsl_team_6_player_stats_name"
                 android:textColor="#000000"
-                android:paddingRight="55dp"
+                android:paddingRight="90dp"
                 android:maxLines="10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

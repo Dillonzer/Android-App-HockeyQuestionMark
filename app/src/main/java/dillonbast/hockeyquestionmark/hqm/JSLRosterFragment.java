@@ -39,8 +39,8 @@ public class JSLRosterFragment extends Fragment {
     }
 
     private class JsoupRun extends AsyncTask<Void, Void, Void> {
-        final int TEAM_TD_SIZE = 160; // used to count the amount of tds to skip so we can count the next team
-        final int NUMBER_OF_PLAYERS = 8; //num of players
+        final int TEAM_TD_SIZE = 250; // used to count the amount of tds to skip so we can count the next team (160 in a team of 8 players with 18 stats each)
+        final int NUMBER_OF_PLAYERS = 13; //num of players
         String url = "https://sites.google.com/site/hockeyquestionmarkapp/JSLRoster";
         Elements td;
         Elements tr;
