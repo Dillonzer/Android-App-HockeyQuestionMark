@@ -71,7 +71,7 @@
         android:paddingBottom="15dp"
         android:textSize="15sp"
         android:visibility="visible"
-        android:text="The season is over! Congratulations to LHL - Golden Seals, RSL - <>, JSL - <> "/>
+        android:text="The season is over! Congratulations to LHL - Golden Seals, RSL - , JSL - Texas Stars "/>
 
     <ImageView
         android:id="@+id/iv_lhl_champ_team"
