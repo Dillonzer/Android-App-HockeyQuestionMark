@@ -71,7 +71,7 @@
         android:paddingBottom="15dp"
         android:textSize="15sp"
         android:visibility="visible"
-        android:text="The season is over! Congratulations to LHL - Golden Seals, RSL - , JSL - Texas Stars "/>
+        android:text="The season is over! Congratulations to LHL - Golden Seals, RSL - Wilkes-Barre/Scranton Penguins, JSL - Texas Stars "/>
 
     <ImageView
         android:id="@+id/iv_lhl_champ_team"
@@ -90,7 +90,7 @@
         android:layout_below="@id/seasons_over"
         android:visibility="visible"
         android:layout_toRightOf="@id/iv_lhl_champ_team"
-        android:src="@mipmap/rsl_reign"/>
+        android:src="@mipmap/rsl_pens"/>
 
     <ImageView
         android:id="@+id/iv_jsl_champ_team"
