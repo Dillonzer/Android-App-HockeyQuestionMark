@@ -39,8 +39,8 @@ public class LHLRosterFragment extends Fragment {
     }
 
     private class JsoupRun extends AsyncTask<Void, Void, Void> {
-        final int TEAM_TD_SIZE = 168; // used to count the amount of tds to skip so we can count the next team
-        final int NUMBER_OF_PLAYERS = 8; //num of players
+        final int TEAM_TD_SIZE = 188; // used to count the amount of tds to skip so we can count the next team
+        final int NUMBER_OF_PLAYERS = 9; //num of players
         String url = "https://sites.google.com/site/hockeyquestionmarkapp/LHLRoster";
         Elements td;
         Elements tr;
