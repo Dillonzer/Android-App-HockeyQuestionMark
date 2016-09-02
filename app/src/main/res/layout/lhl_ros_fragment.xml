@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/lhl_gseals"
+                android:src="@mipmap/lhl_ducks"
                 android:layout_below="@id/tv_lhl_roster_title" />
 
             <TextView
@@ -599,7 +599,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/lhl_blackhawks"
+                android:src="@mipmap/lhl_buffalo"
                 android:layout_below="@id/tv_lhl_team_1_player_stats_name" />
 
             <TextView
@@ -1159,7 +1159,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/lhl_avs"
+                android:src="@mipmap/lhl_blackhawks"
                 android:visibility="visible"
                 android:layout_below="@id/tv_lhl_team_2_player_stats_name" />
 
@@ -1773,7 +1773,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/lhl_phi"
+                android:src="@mipmap/lhl_barons"
                 android:layout_below="@id/tv_lhl_team_3_player_stats_name" />
 
             <TextView
@@ -2333,7 +2333,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/lhl_leafs"
+                android:src="@mipmap/lhl_wild"
                 android:layout_below="@id/tv_lhl_team_4_player_stats_name" />
 
             <TextView
@@ -2893,7 +2893,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/lhl_vanc"
+                android:src="@mipmap/lhl_blues"
                 android:visibility="visible"
                 android:layout_below="@id/tv_lhl_team_5_player_stats_name" />
 

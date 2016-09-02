@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/jsl_seadogs"
+                android:src="@mipmap/jsl_revolution"
                 android:layout_below="@id/tv_jsl_roster_title" />
 
             <TextView
@@ -579,7 +579,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
-                android:src="@mipmap/jsl_texas"
+                android:src="@mipmap/jsl_seadogs"
                 android:layout_below="@id/tv_jsl_team_1_player_stats_name" />
 
             <TextView
@@ -1119,7 +1119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
-                android:src="@mipmap/jsl_perth"
+                android:src="@mipmap/jsl_icebears"
                 android:layout_below="@id/tv_jsl_team_2_player_stats_name" />
 
             <TextView
@@ -1659,7 +1659,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
-                android:src="@mipmap/jsl_wild"
+                android:src="@mipmap/jsl_sherbrooke"
                 android:layout_below="@id/tv_jsl_team_3_player_stats_name" />
 
             <TextView
@@ -2200,7 +2200,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/jsl_icehogs"
+                android:src="@mipmap/jsl_marlies"
                 android:layout_below="@id/tv_jsl_team_4_player_stats_name" />
 
             <TextView
@@ -2739,7 +2739,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/jsl_rouyn"
+                android:src="@mipmap/jsl_texas"
                 android:layout_below="@id/tv_jsl_team_5_player_stats_name" />
 
             <TextView
