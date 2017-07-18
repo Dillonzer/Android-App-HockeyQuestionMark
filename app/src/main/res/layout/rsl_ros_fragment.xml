@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/rsl_gulls"
+                android:src="@mipmap/rsl_wolfpack"
                 android:layout_below="@id/tv_rsl_roster_title" />
 
             <TextView
@@ -578,7 +578,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/rsl_banditos"
+                android:src="@mipmap/jsl_icebears"
                 android:layout_below="@id/tv_rsl_team_1_player_stats_name" />
 
             <TextView
@@ -1117,7 +1117,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/rsl_voyage"
+                android:src="@mipmap/rsl_saints"
                 android:layout_below="@id/tv_rsl_team_2_player_stats_name" />
 
             <TextView
@@ -1656,7 +1656,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/rsl_hitmen"
+                android:src="@mipmap/rsl_railyard"
                 android:visibility="visible"
                 android:layout_below="@id/tv_rsl_team_3_player_stats_name" />
 
@@ -2247,7 +2247,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/rsl_magni"
+                android:src="@mipmap/rsl_sudbury"
                 android:layout_below="@id/tv_rsl_team_4_player_stats_name" />
 
             <TextView
@@ -2786,7 +2786,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/rsl_drakkar"
+                android:src="@mipmap/rsl_salmonkings"
                 android:layout_below="@id/tv_rsl_team_5_player_stats_name" />
 
             <TextView

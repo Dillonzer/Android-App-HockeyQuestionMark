@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/jsl_revolution"
+                android:src="@mipmap/jsl_cobalt"
                 android:layout_below="@id/tv_jsl_roster_title" />
 
             <TextView
@@ -579,7 +579,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
-                android:src="@mipmap/jsl_seadogs"
+                android:src="@mipmap/jsl_muskies"
                 android:layout_below="@id/tv_jsl_team_1_player_stats_name" />
 
             <TextView
@@ -1119,8 +1119,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
-                android:src="@mipmap/jsl_icebears"
-                android:layout_below="@id/tv_jsl_team_2_player_stats_name" />
+                android:src="@mipmap/jsl_whoopee"
+                android:layout_alignBottom="@+id/tv_jsl_team_3_stats_gp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
             <TextView
                 android:id="@+id/tv_jsl_team_3_roster"
@@ -1659,7 +1661,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
-                android:src="@mipmap/jsl_sherbrooke"
+                android:src="@mipmap/jsl_revolution"
                 android:layout_below="@id/tv_jsl_team_3_player_stats_name" />
 
             <TextView
@@ -2200,7 +2202,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/jsl_marlies"
+                android:src="@mipmap/jsl_rit"
                 android:layout_below="@id/tv_jsl_team_4_player_stats_name" />
 
             <TextView
@@ -2739,7 +2741,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/jsl_texas"
+                android:src="@mipmap/jsl_rouyn"
                 android:layout_below="@id/tv_jsl_team_5_player_stats_name" />
 
             <TextView

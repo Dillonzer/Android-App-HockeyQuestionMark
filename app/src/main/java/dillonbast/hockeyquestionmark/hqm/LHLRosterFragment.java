@@ -39,8 +39,8 @@ public class LHLRosterFragment extends Fragment {
     }
 
     private class JsoupRun extends AsyncTask<Void, Void, Void> {
-        final int TEAM_TD_SIZE = 188; // used to count the amount of tds to skip so we can count the next team
-        final int NUMBER_OF_PLAYERS = 9; //num of players
+        final int TEAM_TD_SIZE = 239; // used to count the amount of tds to skip so we can count the next team
+        final int NUMBER_OF_PLAYERS = 11; //num of players
         String url = "https://sites.google.com/site/hockeyquestionmarkapp/LHLRoster";
         Elements td;
         Elements tr;
@@ -94,6 +94,7 @@ public class LHLRosterFragment extends Fragment {
             String t1_player_plmi="";
             String t1_player_gwg="";
             String t1_player_gperc="";
+            String t1_player_shots="";
             String t1_player_saves="";
             String t1_player_saveperc="";
             String t1_player_ga="";
@@ -114,6 +115,7 @@ public class LHLRosterFragment extends Fragment {
             TextView team1_player_plmi = (TextView) getView().findViewById(R.id.tv_lhl_team_1_player_stats_plusmin);
             TextView team1_player_gwg = (TextView) getView().findViewById(R.id.tv_lhl_team_1_player_stats_gwg);
             TextView team1_player_gperc = (TextView) getView().findViewById(R.id.tv_lhl_team_1_player_stats_goalperc);
+            TextView team1_player_shots = (TextView) getView().findViewById(R.id.tv_lhl_team_1_player_stats_shots);
             TextView team1_player_saves = (TextView) getView().findViewById(R.id.tv_lhl_team_1_player_stats_saves);
             TextView team1_player_saveperc = (TextView) getView().findViewById(R.id.tv_lhl_team_1_player_stats_saveperc);
             TextView team1_player_ga = (TextView) getView().findViewById(R.id.tv_lhl_team_1_player_stats_goalsagainst);
@@ -175,37 +177,40 @@ public class LHLRosterFragment extends Fragment {
                                         t1_player_gperc += ele.html() + "\n";
                                         break;
                                     case 11:
-                                        t1_player_saves += ele.html() + "\n";
+                                        t1_player_shots += ele.html() + "\n";
                                         break;
                                     case 12:
-                                        t1_player_saveperc += ele.html() + "\n";
+                                        t1_player_saves += ele.html() + "\n";
                                         break;
                                     case 13:
-                                        t1_player_ga += ele.html() + "\n";
+                                        t1_player_saveperc += ele.html() + "\n";
                                         break;
                                     case 14:
-                                        t1_player_gaa += ele.html() + "\n";
+                                        t1_player_ga += ele.html() + "\n";
                                         break;
                                     case 15:
-                                        t1_player_gp += ele.html() + "\n";
+                                        t1_player_gaa += ele.html() + "\n";
                                         break;
                                     case 16:
-                                        t1_player_gpag += ele.html() + "\n";
+                                        t1_player_gp += ele.html() + "\n";
                                         break;
                                     case 17:
-                                        t1_player_wins += ele.html() + "\n";
+                                        t1_player_gpag += ele.html() + "\n";
                                         break;
                                     case 18:
-                                        t1_player_so += ele.html() + "\n";
+                                        t1_player_wins += ele.html() + "\n";
                                         break;
                                     case 19:
+                                        t1_player_so += ele.html() + "\n";
+                                        break;
+                                    case 20:
                                         t1_player_toi += ele.html() + "\n";
                                         break;
                                     default:
                                         break;
                                 }
 
-                                if(rosterCount < 19)
+                                if(rosterCount < 21)
                                     rosterCount++;
                                 else {
                                     rosterCount = 0;
@@ -266,6 +271,7 @@ public class LHLRosterFragment extends Fragment {
             team1_player_plmi.setText(t1_player_plmi);
             team1_player_gwg.setText(t1_player_gwg);
             team1_player_gperc.setText(t1_player_gperc);
+            team1_player_shots.setText(t1_player_shots);
             team1_player_saves.setText(t1_player_saves);
             team1_player_saveperc.setText(t1_player_saveperc);
             team1_player_ga.setText(t1_player_ga);
@@ -286,7 +292,7 @@ public class LHLRosterFragment extends Fragment {
             TextView team2_pts = (TextView) getView().findViewById(R.id.tv_lhl_team_2_stats_POINTS);
             TextView team2_streak = (TextView) getView().findViewById(R.id.tv_lhl_team_2_stats_STREAK);
 
-//players
+            //players
             String t2_player_name="";
             String t2_player_pos="";
             String t2_player_role="";
@@ -297,6 +303,7 @@ public class LHLRosterFragment extends Fragment {
             String t2_player_plmi="";
             String t2_player_gwg="";
             String t2_player_gperc="";
+            String t2_player_shots="";
             String t2_player_saves="";
             String t2_player_saveperc="";
             String t2_player_ga="";
@@ -317,6 +324,7 @@ public class LHLRosterFragment extends Fragment {
             TextView team2_player_plmi = (TextView) getView().findViewById(R.id.tv_lhl_team_2_player_stats_plusmin);
             TextView team2_player_gwg = (TextView) getView().findViewById(R.id.tv_lhl_team_2_player_stats_gwg);
             TextView team2_player_gperc = (TextView) getView().findViewById(R.id.tv_lhl_team_2_player_stats_goalperc);
+            TextView team2_player_shots = (TextView) getView().findViewById(R.id.tv_lhl_team_2_player_stats_shots);
             TextView team2_player_saves = (TextView) getView().findViewById(R.id.tv_lhl_team_2_player_stats_saves);
             TextView team2_player_saveperc = (TextView) getView().findViewById(R.id.tv_lhl_team_2_player_stats_saveperc);
             TextView team2_player_ga = (TextView) getView().findViewById(R.id.tv_lhl_team_2_player_stats_goalsagainst);
@@ -378,37 +386,40 @@ public class LHLRosterFragment extends Fragment {
                                         t2_player_gperc += ele.html() + "\n";
                                         break;
                                     case 11:
-                                        t2_player_saves += ele.html() + "\n";
+                                        t2_player_shots += ele.html() + "\n";
                                         break;
                                     case 12:
-                                        t2_player_saveperc += ele.html() + "\n";
+                                        t2_player_saves += ele.html() + "\n";
                                         break;
                                     case 13:
-                                        t2_player_ga += ele.html() + "\n";
+                                        t2_player_saveperc += ele.html() + "\n";
                                         break;
                                     case 14:
-                                        t2_player_gaa += ele.html() + "\n";
+                                        t2_player_ga += ele.html() + "\n";
                                         break;
                                     case 15:
-                                        t2_player_gp += ele.html() + "\n";
+                                        t2_player_gaa += ele.html() + "\n";
                                         break;
                                     case 16:
-                                        t2_player_gpag += ele.html() + "\n";
+                                        t2_player_gp += ele.html() + "\n";
                                         break;
                                     case 17:
-                                        t2_player_wins += ele.html() + "\n";
+                                        t2_player_gpag += ele.html() + "\n";
                                         break;
                                     case 18:
-                                        t2_player_so += ele.html() + "\n";
+                                        t2_player_wins += ele.html() + "\n";
                                         break;
                                     case 19:
+                                        t2_player_so += ele.html() + "\n";
+                                        break;
+                                    case 20:
                                         t2_player_toi += ele.html() + "\n";
                                         break;
                                     default:
                                         break;
                                 }
 
-                                if(rosterCount < 19)
+                                if(rosterCount < 21)
                                     rosterCount++;
                                 else {
                                     rosterCount = 0;
@@ -469,6 +480,7 @@ public class LHLRosterFragment extends Fragment {
             team2_player_plmi.setText(t2_player_plmi);
             team2_player_gwg.setText(t2_player_gwg);
             team2_player_gperc.setText(t2_player_gperc);
+            team2_player_shots.setText(t2_player_shots);
             team2_player_saves.setText(t2_player_saves);
             team2_player_saveperc.setText(t2_player_saveperc);
             team2_player_ga.setText(t2_player_ga);
@@ -489,7 +501,7 @@ public class LHLRosterFragment extends Fragment {
             TextView team3_pts = (TextView) getView().findViewById(R.id.tv_lhl_team_3_stats_POINTS);
             TextView team3_streak = (TextView) getView().findViewById(R.id.tv_lhl_team_3_stats_STREAK);
 
-//players
+            //players
             String t3_player_name="";
             String t3_player_pos="";
             String t3_player_role="";
@@ -500,6 +512,7 @@ public class LHLRosterFragment extends Fragment {
             String t3_player_plmi="";
             String t3_player_gwg="";
             String t3_player_gperc="";
+            String t3_player_shots="";
             String t3_player_saves="";
             String t3_player_saveperc="";
             String t3_player_ga="";
@@ -520,6 +533,7 @@ public class LHLRosterFragment extends Fragment {
             TextView team3_player_plmi = (TextView) getView().findViewById(R.id.tv_lhl_team_3_player_stats_plusmin);
             TextView team3_player_gwg = (TextView) getView().findViewById(R.id.tv_lhl_team_3_player_stats_gwg);
             TextView team3_player_gperc = (TextView) getView().findViewById(R.id.tv_lhl_team_3_player_stats_goalperc);
+            TextView team3_player_shots = (TextView) getView().findViewById(R.id.tv_lhl_team_3_player_stats_shots);
             TextView team3_player_saves = (TextView) getView().findViewById(R.id.tv_lhl_team_3_player_stats_saves);
             TextView team3_player_saveperc = (TextView) getView().findViewById(R.id.tv_lhl_team_3_player_stats_saveperc);
             TextView team3_player_ga = (TextView) getView().findViewById(R.id.tv_lhl_team_3_player_stats_goalsagainst);
@@ -543,7 +557,7 @@ public class LHLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + (TEAM_TD_SIZE*2)))//when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*2)))
                         {
 
                             if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
@@ -581,37 +595,40 @@ public class LHLRosterFragment extends Fragment {
                                         t3_player_gperc += ele.html() + "\n";
                                         break;
                                     case 11:
-                                        t3_player_saves += ele.html() + "\n";
+                                        t3_player_shots += ele.html() + "\n";
                                         break;
                                     case 12:
-                                        t3_player_saveperc += ele.html() + "\n";
+                                        t3_player_saves += ele.html() + "\n";
                                         break;
                                     case 13:
-                                        t3_player_ga += ele.html() + "\n";
+                                        t3_player_saveperc += ele.html() + "\n";
                                         break;
                                     case 14:
-                                        t3_player_gaa += ele.html() + "\n";
+                                        t3_player_ga += ele.html() + "\n";
                                         break;
                                     case 15:
-                                        t3_player_gp += ele.html() + "\n";
+                                        t3_player_gaa += ele.html() + "\n";
                                         break;
                                     case 16:
-                                        t3_player_gpag += ele.html() + "\n";
+                                        t3_player_gp += ele.html() + "\n";
                                         break;
                                     case 17:
-                                        t3_player_wins += ele.html() + "\n";
+                                        t3_player_gpag += ele.html() + "\n";
                                         break;
                                     case 18:
-                                        t3_player_so += ele.html() + "\n";
+                                        t3_player_wins += ele.html() + "\n";
                                         break;
                                     case 19:
+                                        t3_player_so += ele.html() + "\n";
+                                        break;
+                                    case 20:
                                         t3_player_toi += ele.html() + "\n";
                                         break;
                                     default:
                                         break;
                                 }
 
-                                if(rosterCount < 19)
+                                if(rosterCount < 21)
                                     rosterCount++;
                                 else {
                                     rosterCount = 0;
@@ -672,6 +689,7 @@ public class LHLRosterFragment extends Fragment {
             team3_player_plmi.setText(t3_player_plmi);
             team3_player_gwg.setText(t3_player_gwg);
             team3_player_gperc.setText(t3_player_gperc);
+            team3_player_shots.setText(t3_player_shots);
             team3_player_saves.setText(t3_player_saves);
             team3_player_saveperc.setText(t3_player_saveperc);
             team3_player_ga.setText(t3_player_ga);
@@ -692,7 +710,7 @@ public class LHLRosterFragment extends Fragment {
             TextView team4_pts = (TextView) getView().findViewById(R.id.tv_lhl_team_4_stats_POINTS);
             TextView team4_streak = (TextView) getView().findViewById(R.id.tv_lhl_team_4_stats_STREAK);
 
-//players
+            //players
             String t4_player_name="";
             String t4_player_pos="";
             String t4_player_role="";
@@ -703,6 +721,7 @@ public class LHLRosterFragment extends Fragment {
             String t4_player_plmi="";
             String t4_player_gwg="";
             String t4_player_gperc="";
+            String t4_player_shots="";
             String t4_player_saves="";
             String t4_player_saveperc="";
             String t4_player_ga="";
@@ -723,6 +742,7 @@ public class LHLRosterFragment extends Fragment {
             TextView team4_player_plmi = (TextView) getView().findViewById(R.id.tv_lhl_team_4_player_stats_plusmin);
             TextView team4_player_gwg = (TextView) getView().findViewById(R.id.tv_lhl_team_4_player_stats_gwg);
             TextView team4_player_gperc = (TextView) getView().findViewById(R.id.tv_lhl_team_4_player_stats_goalperc);
+            TextView team4_player_shots = (TextView) getView().findViewById(R.id.tv_lhl_team_4_player_stats_shots);
             TextView team4_player_saves = (TextView) getView().findViewById(R.id.tv_lhl_team_4_player_stats_saves);
             TextView team4_player_saveperc = (TextView) getView().findViewById(R.id.tv_lhl_team_4_player_stats_saveperc);
             TextView team4_player_ga = (TextView) getView().findViewById(R.id.tv_lhl_team_4_player_stats_goalsagainst);
@@ -746,7 +766,7 @@ public class LHLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + (TEAM_TD_SIZE*3)))//when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*3)))
                         {
 
                             if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
@@ -784,37 +804,40 @@ public class LHLRosterFragment extends Fragment {
                                         t4_player_gperc += ele.html() + "\n";
                                         break;
                                     case 11:
-                                        t4_player_saves += ele.html() + "\n";
+                                        t4_player_shots += ele.html() + "\n";
                                         break;
                                     case 12:
-                                        t4_player_saveperc += ele.html() + "\n";
+                                        t4_player_saves += ele.html() + "\n";
                                         break;
                                     case 13:
-                                        t4_player_ga += ele.html() + "\n";
+                                        t4_player_saveperc += ele.html() + "\n";
                                         break;
                                     case 14:
-                                        t4_player_gaa += ele.html() + "\n";
+                                        t4_player_ga += ele.html() + "\n";
                                         break;
                                     case 15:
-                                        t4_player_gp += ele.html() + "\n";
+                                        t4_player_gaa += ele.html() + "\n";
                                         break;
                                     case 16:
-                                        t4_player_gpag += ele.html() + "\n";
+                                        t4_player_gp += ele.html() + "\n";
                                         break;
                                     case 17:
-                                        t4_player_wins += ele.html() + "\n";
+                                        t4_player_gpag += ele.html() + "\n";
                                         break;
                                     case 18:
-                                        t4_player_so += ele.html() + "\n";
+                                        t4_player_wins += ele.html() + "\n";
                                         break;
                                     case 19:
+                                        t4_player_so += ele.html() + "\n";
+                                        break;
+                                    case 20:
                                         t4_player_toi += ele.html() + "\n";
                                         break;
                                     default:
                                         break;
                                 }
 
-                                if(rosterCount < 19)
+                                if(rosterCount < 21)
                                     rosterCount++;
                                 else {
                                     rosterCount = 0;
@@ -875,6 +898,7 @@ public class LHLRosterFragment extends Fragment {
             team4_player_plmi.setText(t4_player_plmi);
             team4_player_gwg.setText(t4_player_gwg);
             team4_player_gperc.setText(t4_player_gperc);
+            team4_player_shots.setText(t4_player_shots);
             team4_player_saves.setText(t4_player_saves);
             team4_player_saveperc.setText(t4_player_saveperc);
             team4_player_ga.setText(t4_player_ga);
@@ -895,7 +919,7 @@ public class LHLRosterFragment extends Fragment {
             TextView team5_pts = (TextView) getView().findViewById(R.id.tv_lhl_team_5_stats_POINTS);
             TextView team5_streak = (TextView) getView().findViewById(R.id.tv_lhl_team_5_stats_STREAK);
 
-//players
+            //players
             String t5_player_name="";
             String t5_player_pos="";
             String t5_player_role="";
@@ -906,6 +930,7 @@ public class LHLRosterFragment extends Fragment {
             String t5_player_plmi="";
             String t5_player_gwg="";
             String t5_player_gperc="";
+            String t5_player_shots="";
             String t5_player_saves="";
             String t5_player_saveperc="";
             String t5_player_ga="";
@@ -926,6 +951,7 @@ public class LHLRosterFragment extends Fragment {
             TextView team5_player_plmi = (TextView) getView().findViewById(R.id.tv_lhl_team_5_player_stats_plusmin);
             TextView team5_player_gwg = (TextView) getView().findViewById(R.id.tv_lhl_team_5_player_stats_gwg);
             TextView team5_player_gperc = (TextView) getView().findViewById(R.id.tv_lhl_team_5_player_stats_goalperc);
+            TextView team5_player_shots = (TextView) getView().findViewById(R.id.tv_lhl_team_5_player_stats_shots);
             TextView team5_player_saves = (TextView) getView().findViewById(R.id.tv_lhl_team_5_player_stats_saves);
             TextView team5_player_saveperc = (TextView) getView().findViewById(R.id.tv_lhl_team_5_player_stats_saveperc);
             TextView team5_player_ga = (TextView) getView().findViewById(R.id.tv_lhl_team_5_player_stats_goalsagainst);
@@ -949,7 +975,7 @@ public class LHLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + (TEAM_TD_SIZE*4)))//when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*4)))
                         {
 
                             if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
@@ -987,37 +1013,40 @@ public class LHLRosterFragment extends Fragment {
                                         t5_player_gperc += ele.html() + "\n";
                                         break;
                                     case 11:
-                                        t5_player_saves += ele.html() + "\n";
+                                        t5_player_shots += ele.html() + "\n";
                                         break;
                                     case 12:
-                                        t5_player_saveperc += ele.html() + "\n";
+                                        t5_player_saves += ele.html() + "\n";
                                         break;
                                     case 13:
-                                        t5_player_ga += ele.html() + "\n";
+                                        t5_player_saveperc += ele.html() + "\n";
                                         break;
                                     case 14:
-                                        t5_player_gaa += ele.html() + "\n";
+                                        t5_player_ga += ele.html() + "\n";
                                         break;
                                     case 15:
-                                        t5_player_gp += ele.html() + "\n";
+                                        t5_player_gaa += ele.html() + "\n";
                                         break;
                                     case 16:
-                                        t5_player_gpag += ele.html() + "\n";
+                                        t5_player_gp += ele.html() + "\n";
                                         break;
                                     case 17:
-                                        t5_player_wins += ele.html() + "\n";
+                                        t5_player_gpag += ele.html() + "\n";
                                         break;
                                     case 18:
-                                        t5_player_so += ele.html() + "\n";
+                                        t5_player_wins += ele.html() + "\n";
                                         break;
                                     case 19:
+                                        t5_player_so += ele.html() + "\n";
+                                        break;
+                                    case 20:
                                         t5_player_toi += ele.html() + "\n";
                                         break;
                                     default:
                                         break;
                                 }
 
-                                if(rosterCount < 19)
+                                if(rosterCount < 21)
                                     rosterCount++;
                                 else {
                                     rosterCount = 0;
@@ -1078,6 +1107,7 @@ public class LHLRosterFragment extends Fragment {
             team5_player_plmi.setText(t5_player_plmi);
             team5_player_gwg.setText(t5_player_gwg);
             team5_player_gperc.setText(t5_player_gperc);
+            team5_player_shots.setText(t5_player_shots);
             team5_player_saves.setText(t5_player_saves);
             team5_player_saveperc.setText(t5_player_saveperc);
             team5_player_ga.setText(t5_player_ga);
@@ -1087,6 +1117,7 @@ public class LHLRosterFragment extends Fragment {
             team5_player_wins.setText(t5_player_wins);
             team5_player_so.setText(t5_player_so);
             team5_player_toi.setText(t5_player_toi);
+
             //team
             TextView team6_name = (TextView) getView().findViewById(R.id.tv_lhl_team_6_roster);
             TextView team6_gp = (TextView) getView().findViewById(R.id.tv_lhl_team_6_stats_gp);
@@ -1097,7 +1128,7 @@ public class LHLRosterFragment extends Fragment {
             TextView team6_pts = (TextView) getView().findViewById(R.id.tv_lhl_team_6_stats_POINTS);
             TextView team6_streak = (TextView) getView().findViewById(R.id.tv_lhl_team_6_stats_STREAK);
 
-//players
+            //players
             String t6_player_name="";
             String t6_player_pos="";
             String t6_player_role="";
@@ -1108,6 +1139,7 @@ public class LHLRosterFragment extends Fragment {
             String t6_player_plmi="";
             String t6_player_gwg="";
             String t6_player_gperc="";
+            String t6_player_shots="";
             String t6_player_saves="";
             String t6_player_saveperc="";
             String t6_player_ga="";
@@ -1128,6 +1160,7 @@ public class LHLRosterFragment extends Fragment {
             TextView team6_player_plmi = (TextView) getView().findViewById(R.id.tv_lhl_team_6_player_stats_plusmin);
             TextView team6_player_gwg = (TextView) getView().findViewById(R.id.tv_lhl_team_6_player_stats_gwg);
             TextView team6_player_gperc = (TextView) getView().findViewById(R.id.tv_lhl_team_6_player_stats_goalperc);
+            TextView team6_player_shots = (TextView) getView().findViewById(R.id.tv_lhl_team_6_player_stats_shots);
             TextView team6_player_saves = (TextView) getView().findViewById(R.id.tv_lhl_team_6_player_stats_saves);
             TextView team6_player_saveperc = (TextView) getView().findViewById(R.id.tv_lhl_team_6_player_stats_saveperc);
             TextView team6_player_ga = (TextView) getView().findViewById(R.id.tv_lhl_team_6_player_stats_goalsagainst);
@@ -1151,7 +1184,7 @@ public class LHLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + (TEAM_TD_SIZE*5))) //when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*5)))
                         {
 
                             if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
@@ -1189,37 +1222,40 @@ public class LHLRosterFragment extends Fragment {
                                         t6_player_gperc += ele.html() + "\n";
                                         break;
                                     case 11:
-                                        t6_player_saves += ele.html() + "\n";
+                                        t6_player_shots += ele.html() + "\n";
                                         break;
                                     case 12:
-                                        t6_player_saveperc += ele.html() + "\n";
+                                        t6_player_saves += ele.html() + "\n";
                                         break;
                                     case 13:
-                                        t6_player_ga += ele.html() + "\n";
+                                        t6_player_saveperc += ele.html() + "\n";
                                         break;
                                     case 14:
-                                        t6_player_gaa += ele.html() + "\n";
+                                        t6_player_ga += ele.html() + "\n";
                                         break;
                                     case 15:
-                                        t6_player_gp += ele.html() + "\n";
+                                        t6_player_gaa += ele.html() + "\n";
                                         break;
                                     case 16:
-                                        t6_player_gpag += ele.html() + "\n";
+                                        t6_player_gp += ele.html() + "\n";
                                         break;
                                     case 17:
-                                        t6_player_wins += ele.html() + "\n";
+                                        t6_player_gpag += ele.html() + "\n";
                                         break;
                                     case 18:
-                                        t6_player_so += ele.html() + "\n";
+                                        t6_player_wins += ele.html() + "\n";
                                         break;
                                     case 19:
+                                        t6_player_so += ele.html() + "\n";
+                                        break;
+                                    case 20:
                                         t6_player_toi += ele.html() + "\n";
                                         break;
                                     default:
                                         break;
                                 }
 
-                                if(rosterCount < 19)
+                                if(rosterCount < 21)
                                     rosterCount++;
                                 else {
                                     rosterCount = 0;
@@ -1280,6 +1316,7 @@ public class LHLRosterFragment extends Fragment {
             team6_player_plmi.setText(t6_player_plmi);
             team6_player_gwg.setText(t6_player_gwg);
             team6_player_gperc.setText(t6_player_gperc);
+            team6_player_shots.setText(t6_player_shots);
             team6_player_saves.setText(t6_player_saves);
             team6_player_saveperc.setText(t6_player_saveperc);
             team6_player_ga.setText(t6_player_ga);

@@ -1,0 +1,907 @@
+function LHLSched() {
+  var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/19eVof0YuNIPEESL0qRuJE7G8x7wGUVv--1AUNeEEPrk/edit#gid=398507116');
+  var sheet = book.getSheets()[0]; //grab first sheet
+  var MAX_ROWS = 205;//TODO: change for playoffs NOTE: Always changes when they reschedule games
+  var i_loop = 0;
+  var celval;
+  var s_week = ""; 
+  var s_date = "";
+  var s_day = "";
+  var s_time = "";
+  var s_away = "";
+  var s_home = "";
+  var s_result = "";
+  var s_atsign = "";
+  var htmlToPass = "";
+                                       
+  //A- blank
+  //B- week
+  //C- date
+  //D- day
+  //E- time
+  //F- away
+  //G- away.png;
+  //H- @
+  //I- home
+  //J- home.png
+  //K- result
+  //go to 200 for range
+  //Start at Row 7
+  
+  var b = 2;
+  var c = 3;
+  var d = 4;
+  var e = 5;
+  var f = 6;
+  var h = 8;
+  var i = 9;
+  var k = 11;
+  
+  var range = sheet.getRange("A1:K205");//TODO: change for playoffs
+  celval = range.getDisplayValues();
+  htmlToPass = "<table>";
+  for(i_loop = 7; i_loop < MAX_ROWS; i_loop++) //this changes for playoffs too (value of i starts at first row of actual info)
+  {
+    //if it is an time  it will have everything else
+    if(celval[i_loop-1][e-1] != "" && celval[i_loop-1][e-1] != "Time (EDT)" && celval[i_loop-1][e-1] != "Time(EST)" && celval[i_loop-1][e-1] != "Time(EDT)")
+    {
+    //week
+      s_week = celval[i_loop-1][b-1] ;
+    //date
+      s_date = celval[i_loop-1][c-1];
+    //day
+      s_day = celval[i_loop-1][d-1] ;
+    //time
+      s_time = celval[i_loop-1][e-1] ;
+    //away team
+      s_away = celval[i_loop-1][f-1] ;
+      //@
+      s_atsign = celval[i_loop-1][h-1];
+    //home team
+      s_home = celval[i_loop-1][i-1] ;
+    //result
+      s_result = celval[i_loop-1][k-1] ;
+      
+      htmlToPass += "<tr><td>" + s_week + "</td>" + 
+        "<td>" + s_date + "</td>" + 
+        "<td>" + s_day + "</td>" + 
+        "<td>" + s_time + "</td>" + 
+        "<td>" + s_away + "</td>" + 
+        "<td>" + s_atsign + "</td>" + 
+        "<td>" + s_home + "</td>" + 
+        "<td>" + s_result + "</td></tr>";
+    }
+    
+    
+  }
+  
+  htmlToPass += "</table>"
+  
+  //Logger.log(htmlToPass);
+  return (htmlToPass);
+  
+}
+
+function LHLStandings() {
+  var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/19eVof0YuNIPEESL0qRuJE7G8x7wGUVv--1AUNeEEPrk/edit#gid=398507116');
+  var sheet = book.getSheets()[0]; //it's only 1 due to the hidden season 6 sheet -- season 6 sheet is gone
+  var MAX_ROWS = 13;
+  var i_loop = 0;
+  var celval;
+  var s_rank = "";
+  var s_team = "";
+  var s_record = "";
+  var s_points = "";
+  var htmlToPass = "";
+                                       
+  //p = rank
+  //q = team
+  //s = record
+  //t = points
+  var p = 16;
+  var q = 17;
+  var s = 19;
+  var t = 20;
+  
+  var range = sheet.getRange("A1:T200");
+  celval = range.getDisplayValues();
+  
+  htmlToPass = "<table>";
+  
+  for(i_loop = 7; i_loop < MAX_ROWS; i_loop++)
+  {
+    s_rank = celval[i_loop-1][p-1];
+    s_team = celval[i_loop-1][q-1];
+    s_record = celval[i_loop-1][s-1];
+    s_points = celval[i_loop-1][t-1];
+    
+      htmlToPass += "<tr><td>" + s_rank + "</td>" + 
+        "<td>" + s_team + "</td>" + 
+        "<td>" + s_record + "</td>" + 
+        "<td>" + s_points + "</td></tr>";
+   }
+   
+  htmlToPass += "</table>";
+  
+  //Logger.log(htmlToPass);
+  return (htmlToPass);
+  
+}
+
+function RSLStandings() {
+  var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/15nLk15LlQLMWPwj_KAV8zdYM5ylogfuJuPV-hOPJGrY/edit#gid=477313841');
+  var sheet = book.getSheets()[0]; //it's only 1 due to the hidden season 6 sheet
+  var MAX_ROWS = 10;
+  var i_loop = 0;
+  var celval;
+  var s_rank = "";
+  var s_team = "";
+  var s_record = "";
+  var s_points = "";
+  var htmlToPass = "";
+             
+  //o = rank
+  //p = team
+  //r = record
+  //s = points
+  var o = 15;
+  var p = 16;
+  var r = 18;
+  var s = 19;
+  
+  var range = sheet.getRange("A1:T200");
+  celval = range.getDisplayValues();
+  
+  htmlToPass = "<table>";
+  
+  for(i_loop = 4; i_loop < MAX_ROWS; i_loop++)
+  {
+    s_rank = celval[i_loop][o];
+    s_team = celval[i_loop][p];
+    s_record = celval[i_loop][r];
+    s_points = celval[i_loop][s];
+    
+      htmlToPass += "<tr><td>" + s_rank + "</td>" + 
+        "<td>" + s_team + "</td>" + 
+        "<td>" + s_record + "</td>" + 
+        "<td>" + s_points + "</td></tr>";
+   }
+   
+  htmlToPass += "</table>";
+  
+  //Logger.log(htmlToPass);
+  return (htmlToPass);
+  
+}
+
+function RSLSched() {
+  var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/15nLk15LlQLMWPwj_KAV8zdYM5ylogfuJuPV-hOPJGrY/edit#gid=1137655428');
+  var sheet = book.getSheets()[0]; //it's only 1 due to the hidden season 6 sheet -- season 6 sheet is gone?
+  var MAX_ROWS = 123;//TODO: change for playoffs NOTE: Always changes when they reschedule games
+  var i_loop = 0;
+  var celval;
+  var s_week = ""; 
+  var s_date = "";
+  var s_day = "";
+  var s_time = "";
+  var s_away = "";
+  var s_home = "";
+  var s_result = "";
+  var s_atsign = "";
+  var htmlToPass = "";
+                                       
+  //A- blank
+  //B- week
+  //C- date
+  //D- day
+  //E- time
+  //F- away
+  //G- away.png;
+  //H- @
+  //I- home
+  //J- home.png
+  //K- result
+  //go to 200 for range
+  //Start at Row 7
+  
+  var b = 2;
+  var c = 3;
+  var d = 4;
+  var e = 5;
+  var f = 6;
+  var h = 8;
+  var i = 9;
+  var k = 11;
+  
+  var range = sheet.getRange("A1:K123");//TODO: change for playoffs
+  celval = range.getDisplayValues();
+  htmlToPass = "<table>";
+  for(i_loop = 6; i_loop < MAX_ROWS; i_loop++) //this changes for playoffs too (value of i starts at first row of actual info)
+  {
+    //if it is an time  it will have everything else
+    if(celval[i_loop-1][e-1] != "" && celval[i_loop-1][e-1] != "Time (EDT)" && celval[i_loop-1][e-1] != "Time(EST)" && celval[i_loop-1][e-1] != "Time(EDT)")
+    {
+    //week
+      s_week = celval[i_loop-1][b-1] ;
+    //date
+      s_date = celval[i_loop-1][c-1];
+    //day
+      s_day = celval[i_loop-1][d-1] ;
+    //time
+      s_time = celval[i_loop-1][e-1] ;
+    //away team
+      s_away = celval[i_loop-1][f-1] ;
+      //@
+      s_atsign = celval[i_loop-1][h-1];
+    //home team
+      s_home = celval[i_loop-1][i-1] ;
+    //result
+      s_result = celval[i_loop-1][k-1] ;
+      
+      htmlToPass += "<tr><td>" + s_week + "</td>" + 
+        "<td>" + s_date + "</td>" + 
+        "<td>" + s_day + "</td>" + 
+        "<td>" + s_time + "</td>" + 
+        "<td>" + s_away + "</td>" + 
+        "<td>" + s_atsign + "</td>" + 
+        "<td>" + s_home + "</td>" + 
+        "<td>" + s_result + "</td></tr>";
+    }
+    
+    
+  }
+  
+  htmlToPass += "</table>"
+  
+  //Logger.log(htmlToPass);
+  return (htmlToPass);
+ 
+}
+
+function JSLStandings() {
+  var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1hwOCsdhdtvTfG87VG97CrY3-uNvRqVYhfbIcWq0EnNk/edit#gid=1685581265');
+  var sheet = book.getSheets()[1]; //it's only 1 due to the hidden season 6 sheet
+  var MAX_ROWS = 11;
+  var i_loop = 0;
+  var celval;
+  var s_rank = "";
+  var s_team = "";
+  var s_record = "";
+  var s_points = "";
+  var htmlToPass = "";
+                                       
+  //p = rank
+  //q = team
+  //s = record
+  //t = points
+  var p = 16;
+  var q = 17;
+  var s = 19;
+  var t = 20;
+  
+  var range = sheet.getRange("A1:T200");
+  celval = range.getDisplayValues();
+  
+  htmlToPass = "<table>";
+  
+  for(i_loop = 5; i_loop < MAX_ROWS; i_loop++)
+  {
+    s_rank = celval[i_loop][p-1];
+    s_team = celval[i_loop][q-1];
+    s_record = celval[i_loop][s-1];
+    s_points = celval[i_loop][t-1];
+    
+      htmlToPass += "<tr><td>" + s_rank + "</td>" + 
+        "<td>" + s_team + "</td>" + 
+        "<td>" + s_record + "</td>" + 
+        "<td>" + s_points + "</td></tr>";
+   }
+   
+  htmlToPass += "</table>";
+  
+  //Logger.log(htmlToPass);
+  return (htmlToPass);
+  
+}
+
+function JSLSched() {
+  var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1hwOCsdhdtvTfG87VG97CrY3-uNvRqVYhfbIcWq0EnNk/edit#gid1341323333');
+  var sheet = book.getSheets()[1]; //hidden season 6 tab
+  var MAX_ROWS = 200;
+  var i_loop = 0;
+  var celval;
+  var s_week = ""; 
+  var s_date = "";
+  var s_day = "";
+  var s_time = "";
+  var s_away = "";
+  var s_atsign ="";
+  var s_home = "";
+  var s_result = "";
+  var htmlToPass = "";
+                                       
+  //A- blank
+  //B- week
+  //C- date
+  //D- day
+  //E- time
+  //F- away
+  //G- away.png;
+  //H- @
+  //I- home
+  //J- home.png
+  //K- result
+  //go to 200 for range, even though only 87 grants room for growth
+  //Start at Row 7
+  
+  var b = 2;
+  var c = 3;
+  var d = 4;
+  var e = 5;
+  var f = 6;
+  var h = 8;
+  var i = 9;
+  var k = 11;
+  
+  var range = sheet.getRange("A1:K200");
+  celval = range.getDisplayValues();
+  htmlToPass = "<table>";
+  for(i_loop = 7; i_loop < MAX_ROWS; i_loop++)
+  {
+    //if it is an time it will have everything else
+    if(celval[i_loop-1][e-1] != "" && celval[i_loop-1][e-1] != "Time (EDT)" && celval[i_loop-1][e-1] != "Time (EST)" )
+    {
+    //week
+      s_week = celval[i_loop-1][b-1] ;
+    //date
+      s_date = celval[i_loop-1][c-1];
+    //day
+      s_day = celval[i_loop-1][d-1] ;
+    //time
+      s_time = celval[i_loop-1][e-1] ;
+    //away team
+      s_away = celval[i_loop-1][f-1] ;
+    //home team
+      s_home = celval[i_loop-1][i-1] ;
+      //at sign
+      s_atsign = celval[i_loop-1][h-1];
+    //result
+      s_result = celval[i_loop-1][k-1] ;
+      
+      htmlToPass += "<tr><td>" + s_week + "</td>" + 
+        "<td>" + s_date + "</td>" + 
+        "<td>" + s_day + "</td>" + 
+        "<td>" + s_time + "</td>" + 
+        "<td>" + s_away + "</td>" + 
+        "<td>" + s_atsign + "</td>" + 
+        "<td>" + s_home + "</td>" + 
+        "<td>" + s_result + "</td></tr>";
+    }
+    
+    
+  }
+  
+  htmlToPass += "</table>"
+  
+  //Logger.log(htmlToPass);
+  return (htmlToPass);
+  
+}
+
+function SchedToSite() {
+  // This snippet retrieves the site at the given URL
+ // Throws an Invalid argument exception if the site does not exist or if
+ // the URL given is invalid
+ var site = SitesApp.getSiteByUrl("https://sites.google.com/site/hockeyquestionmarkapp/");
+  
+  
+  // Delete ALL the pages!
+ var pages = site.getAllDescendants();
+  
+ for(var i in pages) {
+   pages[i].deletePage();
+ }
+
+  
+  var newwebpage1 = site.createWebPage("LHL Sched","LHLSched", LHLSched());
+  var newwebpage2 = site.createWebPage("LHL Roster","LHLRoster", getRangeforLHLRoster());
+  var newwebpage3 = site.createWebPage("RSL Roster","RSLRoster", getRangeforRSLRoster());
+  var newwebpage4 = site.createWebPage("JSL Roster","JSLRoster", getRangeforJSLRoster());
+  var newwebpage5 = site.createWebPage("RSL Sched","RSLSched", RSLSched());
+  var newwebpage6 = site.createWebPage("JSL Sched","JSLSched", JSLSched());
+  var newwebpage7 = site.createWebPage("LHL Standings","LHLStandings", LHLStandings());
+  var newwebpage8 = site.createWebPage("RSL Standings","RSLStandings", RSLStandings());
+  var newwebpage9 = site.createWebPage("JSL Standings","JSLStandings", JSLStandings());
+
+}
+
+function getRangeforLHLRoster() {
+  var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1EeXo-eB4stUowcC-d67sWWOC3x7LgDdrPbv6ovD1atE/edit#gid=1104877559');
+  var sheet = book.getSheets()[0]; //should be 0 might change
+  var MAX_ROWS = 44;
+  var NUM_OF_TEAMS = 6;
+  var NUM_OF_PLAYERS = 11;
+  var NUM_OF_STATS = 22;
+  var START_POS_HIGH = 10;
+  var START_POS_LOW = 32;
+  var i_loop = 0;
+  var j_loop = 0;
+  var celval;
+  var htmlToPass = "";
+  var range = sheet.getRange("A1:BP44");
+  celval = range.getDisplayValues();
+
+ 
+  htmlToPass += "<table>";
+  for(var ii = 0; ii < NUM_OF_TEAMS; ii++)
+  {
+    switch(ii) 
+    {
+      case 0:
+        htmlToPass += "<tr><td>" + celval[0][8] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[2][1] + "</td><td>" 
+        + celval[3][1] + "</td><td>"
+        + celval[4][1] + "</td><td>"
+        + celval[5][1] + "</td><td>"
+        + celval[6][1] + "</td><td>"
+        + celval[7][1] + "</td><td>"
+        + celval[8][1] + "</td></tr>";
+        //player stats
+        for(i_loop = START_POS_HIGH; i_loop < (START_POS_HIGH+NUM_OF_PLAYERS); i_loop++)//i_loop is the starting row of the stats
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = 0; j_loop < NUM_OF_STATS; j_loop++)//j_loop is the starting column of the stats
+          {
+            htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+      case 1:
+        htmlToPass += "<tr><td>" + celval[0][31] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[2][24] + "</td><td>" 
+        + celval[3][24] + "</td><td>"
+        + celval[4][24] + "</td><td>"
+        + celval[5][24] + "</td><td>"
+        + celval[6][24] + "</td><td>"
+        + celval[7][24] + "</td><td>"
+        + celval[8][24] + "</td></tr>";
+        //player stats
+        for(i_loop = START_POS_HIGH; i_loop < (START_POS_HIGH+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = (NUM_OF_STATS+1); j_loop < (NUM_OF_STATS+NUM_OF_STATS+1); j_loop++)
+          {
+            htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+      case 2:
+        htmlToPass += "<tr><td>" + celval[0][54] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[2][47] + "</td><td>" 
+        + celval[3][47] + "</td><td>"
+        + celval[4][47] + "</td><td>"
+        + celval[5][47] + "</td><td>"
+        + celval[6][47] + "</td><td>"
+        + celval[7][47] + "</td><td>"
+        + celval[8][47] +"</td></tr>";
+        //player stats
+        for(i_loop = START_POS_HIGH; i_loop < (START_POS_HIGH+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = (NUM_OF_STATS+NUM_OF_STATS+2); j_loop < (NUM_OF_STATS+NUM_OF_STATS+NUM_OF_STATS+1); j_loop++)
+          {
+            htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>";
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+      case 3:
+        htmlToPass += "<tr><td>" + celval[22][8] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[24][1] + "</td><td>" 
+        + celval[25][1] + "</td><td>"
+        + celval[26][1] + "</td><td>"
+        + celval[27][1] + "</td><td>"
+        + celval[28][1] + "</td><td>"
+        + celval[29][1] + "</td><td>"
+        + celval[30][1] + "</td></tr>";
+        //player stats
+        for(i_loop = START_POS_LOW; i_loop < (START_POS_LOW+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = 0; j_loop < NUM_OF_STATS; j_loop++)
+          {
+            htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+      case 4:
+        htmlToPass += "<tr><td>" + celval[22][31] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[24][24] + "</td><td>" 
+        + celval[25][24] + "</td><td>"
+        + celval[26][24] + "</td><td>"
+        + celval[27][24] + "</td><td>"
+        + celval[28][24] + "</td><td>"
+        + celval[29][24] + "</td><td>"
+        + celval[30][24] + "</td></tr>";
+        //player stats
+        for(i_loop = START_POS_LOW; i_loop < (START_POS_LOW+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = (NUM_OF_STATS+1); j_loop < (NUM_OF_STATS+NUM_OF_STATS+1); j_loop++)
+          {
+            htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+      case 5:
+        htmlToPass += "<tr><td>" + celval[22][54] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[24][47] + "</td><td>" 
+        + celval[25][47] + "</td><td>"
+        + celval[26][47] + "</td><td>"
+        + celval[27][47] + "</td><td>"
+        + celval[28][47] + "</td><td>"
+        + celval[29][47] + "</td><td>"
+        + celval[30][47] + "</td></tr>";
+        //player stats
+        for(i_loop = START_POS_LOW; i_loop < (START_POS_LOW+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = (NUM_OF_STATS+NUM_OF_STATS+2); j_loop < (NUM_OF_STATS+NUM_OF_STATS+NUM_OF_STATS+1); j_loop++)
+          {
+            htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+    }
+  }
+   
+  htmlToPass += "</table>";
+  //Logger.log(htmlToPass);
+  return(htmlToPass);
+  
+  //TEAM 7 (n/a)
+  //TEAM 8 (n/a)
+  
+}
+
+
+function getRangeforJSLRoster() {
+  var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1CmuGnqSEpkVS7F8utGcYRb6mptN5Zlq68jwQal_AVx8/edit#gid=2097284163');
+  var sheet = book.getSheets()[0]; //should be 0 might change
+  var MAX_ROWS = 52;
+  var NUM_OF_TEAMS = 6;
+  var NUM_OF_PLAYERS = 16;
+  var NUM_OF_STATS = 19;
+  var START_POS_HIGH = 10;
+  var START_POS_LOW = 37;
+  var i_loop = 0;
+  var j_loop = 0;
+  var celval;
+  var htmlToPass = "";
+  var range = sheet.getRange("A1:BK54");
+  celval = range.getDisplayValues();
+  
+  //Will do seperate teams
+  //NOTE: Using getRange gives a 2D array which starts at 0, even though A=1, so in the array A=0
+  
+  //Same as above except name is changed to the starting column
+
+ 
+  htmlToPass += "<table>";
+  for(var ii = 0; ii < NUM_OF_TEAMS; ii++)
+  {
+    switch(ii) 
+    {
+      case 0:
+        htmlToPass += "<tr><td>" + celval[0][0] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[2][1] + "</td><td>" 
+        + celval[3][1] + "</td><td>"
+        + celval[4][1] + "</td><td>"
+        + celval[5][1] + "</td><td>"
+        + celval[6][1] + "</td><td>"
+        + celval[7][1] + "</td><td>"
+        + celval[8][1] + "</td></tr>";
+        //player stats
+        for(i_loop = START_POS_HIGH; i_loop < (START_POS_HIGH+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = 0; j_loop < NUM_OF_STATS; j_loop++)
+          {
+             htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+      case 1:
+        htmlToPass += "<tr><td>" + celval[0][21] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[2][22] + "</td><td>" 
+        + celval[3][22] + "</td><td>"
+        + celval[4][22] + "</td><td>"
+        + celval[5][22] + "</td><td>"
+        + celval[6][22] + "</td><td>"
+        + celval[7][22] + "</td><td>"
+        + celval[8][22] + "</td></tr>";
+        //player stats
+        for(i_loop = START_POS_HIGH; i_loop < (START_POS_HIGH+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = (NUM_OF_STATS+2); j_loop < (NUM_OF_STATS+NUM_OF_STATS+2); j_loop++)
+          {
+              htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+      case 2:
+        htmlToPass += "<tr><td>" + celval[0][42] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[2][43] + "</td><td>" 
+        + celval[3][43] + "</td><td>"
+        + celval[4][43] + "</td><td>"
+        + celval[5][43] + "</td><td>"
+        + celval[6][43] + "</td><td>"
+        + celval[7][43] + "</td><td>"
+        + celval[8][43] + "</td></tr>";
+        //player stats
+        for(i_loop = START_POS_HIGH; i_loop < (START_POS_HIGH+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = (NUM_OF_STATS+NUM_OF_STATS+4); j_loop < (NUM_OF_STATS+NUM_OF_STATS+NUM_OF_STATS+3); j_loop++)
+          {
+              htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+      case 3:
+        htmlToPass += "<tr><td>" + celval[27][0] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[29][1] + "</td><td>" 
+        + celval[30][1] + "</td><td>"
+        + celval[31][1] + "</td><td>"
+        + celval[32][1] + "</td><td>"
+        + celval[33][1] + "</td><td>"
+        + celval[34][1] + "</td><td>"
+        + celval[35][1] + "</td></tr>";
+        //player stats
+        for(i_loop = START_POS_LOW; i_loop < (START_POS_LOW+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = 0; j_loop < NUM_OF_STATS; j_loop++)
+          {
+             htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+            
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+      case 4:
+        htmlToPass += "<tr><td>" + celval[27][21] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[28][22] + "</td><td>" 
+        + celval[29][22] + "</td><td>"
+        + celval[30][22] + "</td><td>"
+        + celval[31][22] + "</td><td>"
+        + celval[32][22] + "</td><td>"
+        + celval[33][22] + "</td><td>"
+        + celval[34][22] + "</td></tr>";
+        //player stats
+        for(i_loop = START_POS_LOW; i_loop < (START_POS_LOW+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = (NUM_OF_STATS+2); j_loop < (NUM_OF_STATS+NUM_OF_STATS+2); j_loop++)
+          {
+             htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+      case 5:
+        htmlToPass += "<tr><td>" + celval[27][42] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[28][43] + "</td><td>" 
+        + celval[29][43] + "</td><td>"
+        + celval[30][43] + "</td><td>"
+        + celval[31][43] + "</td><td>"
+        + celval[32][43] + "</td><td>"
+        + celval[33][43] + "</td><td>"
+        + celval[34][43] + "</td></tr>";
+        
+        //player stats
+        for(i_loop = START_POS_LOW; i_loop < (START_POS_LOW+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = (NUM_OF_STATS+NUM_OF_STATS+4); j_loop < (NUM_OF_STATS+NUM_OF_STATS+NUM_OF_STATS+3); j_loop++)
+          {
+              htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+    }
+  }
+   
+  htmlToPass += "</table>";
+ // Logger.log(htmlToPass);
+  return(htmlToPass);
+  
+  
+  
+}
+
+function getRangeforRSLRoster() {
+  var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1ECzm_-KbJ6JHo-o_CPO77Bs2lH-t_VkTsnEoFbaf_Xo/edit#gid=1449933714');
+  var sheet = book.getSheets()[0]; //should be 0 might change
+  var MAX_ROWS = 38;
+  var NUM_OF_TEAMS = 6;
+  var NUM_OF_PLAYERS = 8;
+  var NUM_OF_STATS = 21;
+  var START_POS_HIGH = 10;
+  var START_POS_LOW = 29;
+  var i_loop = 0;
+  var j_loop = 0;
+  var celval;
+  var htmlToPass = "";
+  var range = sheet.getRange("A1:BQ38");
+  celval = range.getDisplayValues();
+  
+  //Will do seperate teams
+  //NOTE: Using getRange gives a 2D array which starts at 0, even though A=1, so in the array A=0
+  
+  //Same as above except name is changed to the starting column
+
+ 
+  htmlToPass += "<table>";
+  for(var ii = 0; ii < 8; ii++)
+  {
+   switch(ii) 
+    {
+      case 0:
+        htmlToPass += "<tr><td>" + celval[0][0] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[2][1] + "</td><td>" 
+        + celval[3][1] + "</td><td>"
+        + celval[4][1] + "</td><td>"
+        + celval[5][1] + "</td><td>"
+        + celval[6][1] + "</td><td>"
+        + celval[7][1] + "</td><td>"
+        + celval[8][1] + "</td></tr>";
+        //player stats
+        for(i_loop = START_POS_HIGH; i_loop < (START_POS_HIGH+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = 0; j_loop < NUM_OF_STATS; j_loop++)
+          {
+              htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+      case 1:
+        htmlToPass += "<tr><td>" + celval[0][23] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[2][24] + "</td><td>" 
+        + celval[3][24] + "</td><td>"
+        + celval[4][24] + "</td><td>"
+        + celval[5][24] + "</td><td>"
+        + celval[6][24] + "</td><td>"
+        + celval[7][24] + "</td><td>"
+        + celval[8][24] + "</td></tr>";
+        //player stats
+        for(i_loop = START_POS_HIGH; i_loop < (START_POS_HIGH+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = (NUM_OF_STATS+2); j_loop < (NUM_OF_STATS+NUM_OF_STATS+3); j_loop++)
+          {
+              htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+      case 2:
+        htmlToPass += "<tr><td>" + celval[0][46] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[2][47] + "</td><td>" 
+        + celval[3][47] + "</td><td>"
+        + celval[4][47] + "</td><td>"
+        + celval[5][47] + "</td><td>"
+        + celval[6][47] + "</td><td>"
+        + celval[7][47] + "</td><td>"
+        + celval[8][47] + "</td></tr>";
+        //player stats
+        for(i_loop = START_POS_HIGH; i_loop < (START_POS_HIGH+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = (NUM_OF_STATS+NUM_OF_STATS+4); j_loop < (NUM_OF_STATS+NUM_OF_STATS+NUM_OF_STATS+3); j_loop++)
+          {
+              htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+      case 3:
+        htmlToPass += "<tr><td>" + celval[19][0] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[21][1] + "</td><td>" 
+        + celval[22][1] + "</td><td>"
+        + celval[23][1] + "</td><td>"
+        + celval[24][1] + "</td><td>"
+        + celval[25][1] + "</td><td>"
+        + celval[26][1] + "</td><td>"
+        + celval[27][1] + "</td></tr>";
+        //player stats
+        for(i_loop = START_POS_LOW; i_loop < (START_POS_LOW+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = 0; j_loop < NUM_OF_STATS; j_loop++)
+          {
+              htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+      case 4:
+        htmlToPass += "<tr><td>" + celval[19][23] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[21][24] + "</td><td>" 
+        + celval[22][24] + "</td><td>"
+        + celval[23][24] + "</td><td>"
+        + celval[24][24] + "</td><td>"
+        + celval[25][24] + "</td><td>"
+        + celval[26][24] + "</td><td>"
+        + celval[27][24] + "</td></tr>";
+        //player stats
+        for(i_loop = START_POS_LOW; i_loop < (START_POS_LOW+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = (NUM_OF_STATS+2); j_loop < (NUM_OF_STATS+NUM_OF_STATS+4); j_loop++)
+          {
+              htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+      case 5:
+        htmlToPass += "<tr><td>" + celval[19][46] + "</td></tr>"; //team name
+        htmlToPass += "<tr><td>" //team stats
+        + celval[21][47] + "</td><td>" 
+        + celval[22][47] + "</td><td>"
+        + celval[23][47] + "</td><td>"
+        + celval[24][47] + "</td><td>"
+        + celval[25][47] + "</td><td>"
+        + celval[26][47] + "</td><td>"
+        + celval[27][47] + "</td></tr>";
+        
+        //player stats
+        for(i_loop = START_POS_LOW; i_loop < (START_POS_LOW+NUM_OF_PLAYERS); i_loop++)
+        {
+          htmlToPass += "<tr>"
+          for(j_loop = (NUM_OF_STATS+NUM_OF_STATS+4); j_loop < (NUM_OF_STATS+NUM_OF_STATS+NUM_OF_STATS+1); j_loop++)
+          {
+              htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
+          }
+          htmlToPass += "</tr>";
+        }
+        break;
+    }
+  }
+   
+  htmlToPass += "</table>";
+ // Logger.log(htmlToPass);
+  return(htmlToPass);
+  
+  
+}

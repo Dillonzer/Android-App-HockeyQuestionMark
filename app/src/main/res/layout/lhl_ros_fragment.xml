@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/lhl_ducks"
+                android:src="@mipmap/lhl_thrashers"
                 android:layout_below="@id/tv_lhl_roster_title" />
 
             <TextView
@@ -302,6 +302,17 @@
                 android:layout_toRightOf="@id/tv_lhl_team_1_player_stats_title_gwg"/>
 
             <TextView
+                android:id="@+id/tv_lhl_team_1_player_stats_title_shots"
+                android:textColor="#000000"
+                android:text="Shots"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_lhl_team_1_roster"
+                android:layout_toRightOf="@id/tv_lhl_team_1_player_stats_title_goalperc"/>
+
+            <TextView
                 android:id="@+id/tv_lhl_team_1_player_stats_title_saves"
                 android:textColor="#000000"
                 android:text="Saves"
@@ -310,7 +321,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_lhl_team_1_roster"
-                android:layout_toRightOf="@id/tv_lhl_team_1_player_stats_title_goalperc"/>
+                android:layout_toRightOf="@id/tv_lhl_team_1_player_stats_title_shots"/>
 
             <TextView
                 android:id="@+id/tv_lhl_team_1_player_stats_title_saveperc"
@@ -502,6 +513,16 @@
                 android:layout_toRightOf="@id/tv_lhl_team_1_player_stats_title_gwg"/>
 
             <TextView
+                android:id="@+id/tv_lhl_team_1_player_stats_shots"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_lhl_team_1_roster"
+                android:layout_toRightOf="@id/tv_lhl_team_1_player_stats_goalperc"/>
+
+            <TextView
                 android:id="@+id/tv_lhl_team_1_player_stats_saves"
                 android:textColor="#000000"
                 android:maxLines="10"
@@ -509,7 +530,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_lhl_team_1_player_stats_title_saves"
-                android:layout_toRightOf="@id/tv_lhl_team_1_player_stats_title_goalperc"/>
+                android:layout_toRightOf="@id/tv_lhl_team_1_player_stats_shots"/>
 
             <TextView
                 android:id="@+id/tv_lhl_team_1_player_stats_saveperc"
@@ -599,7 +620,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/lhl_buffalo"
+                android:src="@mipmap/lhl_flames"
                 android:layout_below="@id/tv_lhl_team_1_player_stats_name" />
 
             <TextView
@@ -863,6 +884,17 @@
                 android:layout_toRightOf="@id/tv_lhl_team_2_player_stats_title_gwg"/>
 
             <TextView
+                android:id="@+id/tv_lhl_team_2_player_stats_title_shots"
+                android:textColor="#000000"
+                android:text="Shots"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_lhl_team_2_roster"
+                android:layout_toRightOf="@id/tv_lhl_team_2_player_stats_title_goalperc"/>
+
+            <TextView
                 android:id="@+id/tv_lhl_team_2_player_stats_title_saves"
                 android:textColor="#000000"
                 android:text="Saves"
@@ -871,7 +903,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_lhl_team_2_roster"
-                android:layout_toRightOf="@id/tv_lhl_team_2_player_stats_title_goalperc"/>
+                android:layout_toRightOf="@id/tv_lhl_team_2_player_stats_title_shots"/>
 
             <TextView
                 android:id="@+id/tv_lhl_team_2_player_stats_title_saveperc"
@@ -1063,6 +1095,16 @@
                 android:layout_toRightOf="@id/tv_lhl_team_2_player_stats_title_gwg"/>
 
             <TextView
+                android:id="@+id/tv_lhl_team_2_player_stats_shots"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_lhl_team_2_roster"
+                android:layout_toRightOf="@id/tv_lhl_team_2_player_stats_goalperc"/>
+
+            <TextView
                 android:id="@+id/tv_lhl_team_2_player_stats_saves"
                 android:textColor="#000000"
                 android:maxLines="10"
@@ -1070,7 +1112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_lhl_team_2_player_stats_title_saves"
-                android:layout_toRightOf="@id/tv_lhl_team_2_player_stats_title_goalperc"/>
+                android:layout_toRightOf="@id/tv_lhl_team_2_player_stats_title_shots"/>
 
             <TextView
                 android:id="@+id/tv_lhl_team_2_player_stats_saveperc"
@@ -1449,6 +1491,17 @@
                 android:layout_toRightOf="@id/tv_lhl_team_3_player_stats_title_gwg"/>
 
             <TextView
+                android:id="@+id/tv_lhl_team_3_player_stats_title_shots"
+                android:textColor="#000000"
+                android:text="Shots"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_lhl_team_3_roster"
+                android:layout_toRightOf="@id/tv_lhl_team_3_player_stats_title_goalperc"/>
+
+            <TextView
                 android:id="@+id/tv_lhl_team_3_player_stats_title_saves"
                 android:textColor="#000000"
                 android:text="Saves"
@@ -1456,9 +1509,11 @@
                 android:paddingTop="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/iv_lhl_team_3_roster"
                 android:visibility="visible"
-                android:layout_toRightOf="@id/tv_lhl_team_3_player_stats_title_goalperc"/>
+                android:layout_alignBaseline="@+id/tv_lhl_team_3_player_stats_title_saveperc"
+                android:layout_alignBottom="@+id/tv_lhl_team_3_player_stats_title_saveperc"
+                android:layout_toRightOf="@+id/tv_lhl_team_3_player_stats_title_shots"
+                android:layout_toEndOf="@+id/tv_lhl_team_3_player_stats_title_shots" />
 
             <TextView
                 android:id="@+id/tv_lhl_team_3_player_stats_title_saveperc"
@@ -1668,6 +1723,16 @@
                 android:layout_toRightOf="@id/tv_lhl_team_3_player_stats_title_gwg"/>
 
             <TextView
+                android:id="@+id/tv_lhl_team_3_player_stats_shots"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_lhl_team_3_roster"
+                android:layout_toRightOf="@id/tv_lhl_team_3_player_stats_goalperc"/>
+
+            <TextView
                 android:id="@+id/tv_lhl_team_3_player_stats_saves"
                 android:textColor="#000000"
                 android:maxLines="10"
@@ -1676,7 +1741,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_lhl_team_3_player_stats_title_saves"
                 android:visibility="visible"
-                android:layout_toRightOf="@id/tv_lhl_team_3_player_stats_title_goalperc"/>
+                android:layout_toRightOf="@id/tv_lhl_team_3_player_stats_title_shots"/>
 
             <TextView
                 android:id="@+id/tv_lhl_team_3_player_stats_saveperc"
@@ -1773,7 +1838,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/lhl_barons"
+                android:src="@mipmap/lhl_phi"
                 android:layout_below="@id/tv_lhl_team_3_player_stats_name" />
 
             <TextView
@@ -2037,6 +2102,17 @@
                 android:layout_toRightOf="@id/tv_lhl_team_4_player_stats_title_gwg"/>
 
             <TextView
+                android:id="@+id/tv_lhl_team_4_player_stats_title_shots"
+                android:textColor="#000000"
+                android:text="Shots"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_lhl_team_4_roster"
+                android:layout_toRightOf="@id/tv_lhl_team_4_player_stats_title_goalperc"/>
+
+            <TextView
                 android:id="@+id/tv_lhl_team_4_player_stats_title_saves"
                 android:textColor="#000000"
                 android:text="Saves"
@@ -2045,7 +2121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_lhl_team_4_roster"
-                android:layout_toRightOf="@id/tv_lhl_team_4_player_stats_title_goalperc"/>
+                android:layout_toRightOf="@id/tv_lhl_team_4_player_stats_title_shots"/>
 
             <TextView
                 android:id="@+id/tv_lhl_team_4_player_stats_title_saveperc"
@@ -2237,6 +2313,16 @@
                 android:layout_toRightOf="@id/tv_lhl_team_4_player_stats_title_gwg"/>
 
             <TextView
+                android:id="@+id/tv_lhl_team_4_player_stats_shots"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_lhl_team_4_roster"
+                android:layout_toRightOf="@id/tv_lhl_team_4_player_stats_goalperc"/>
+
+            <TextView
                 android:id="@+id/tv_lhl_team_4_player_stats_saves"
                 android:textColor="#000000"
                 android:maxLines="10"
@@ -2244,7 +2330,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_lhl_team_4_player_stats_title_saves"
-                android:layout_toRightOf="@id/tv_lhl_team_4_player_stats_title_goalperc"/>
+                android:layout_toRightOf="@id/tv_lhl_team_4_player_stats_title_shots"/>
 
             <TextView
                 android:id="@+id/tv_lhl_team_4_player_stats_saveperc"
@@ -2333,7 +2419,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/lhl_wild"
+                android:src="@mipmap/lhl_leafs"
                 android:layout_below="@id/tv_lhl_team_4_player_stats_name" />
 
             <TextView
@@ -2797,6 +2883,27 @@
                 android:layout_toRightOf="@id/tv_lhl_team_5_player_stats_title_gwg"/>
 
             <TextView
+                android:id="@+id/tv_lhl_team_5_player_stats_shots"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_lhl_team_5_roster"
+                android:layout_toRightOf="@id/tv_lhl_team_5_player_stats_goalperc"/>
+
+            <TextView
+                android:id="@+id/tv_lhl_team_5_player_stats_title_shots"
+                android:textColor="#000000"
+                android:text="Shots"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_lhl_team_5_roster"
+                android:layout_toRightOf="@id/tv_lhl_team_5_player_stats_title_goalperc"/>"/>
+
+            <TextView
                 android:id="@+id/tv_lhl_team_5_player_stats_saves"
                 android:textColor="#000000"
                 android:maxLines="10"
@@ -2804,7 +2911,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_lhl_team_5_player_stats_title_saves"
-                android:layout_toRightOf="@id/tv_lhl_team_5_player_stats_title_goalperc"/>
+                android:layout_toRightOf="@id/tv_lhl_team_5_player_stats_title_shots"/>
 
             <TextView
                 android:id="@+id/tv_lhl_team_5_player_stats_saveperc"
@@ -2893,7 +3000,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:src="@mipmap/lhl_blues"
+                android:src="@mipmap/lhl_wsh"
                 android:visibility="visible"
                 android:layout_below="@id/tv_lhl_team_5_player_stats_name" />
 
@@ -3183,6 +3290,17 @@
                 android:layout_toRightOf="@id/tv_lhl_team_6_player_stats_title_gwg"/>
 
             <TextView
+                android:id="@+id/tv_lhl_team_6_player_stats_title_shots"
+                android:textColor="#000000"
+                android:text="Shots"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_lhl_team_6_roster"
+                android:layout_toRightOf="@id/tv_lhl_team_6_player_stats_title_goalperc"/>
+
+            <TextView
                 android:id="@+id/tv_lhl_team_6_player_stats_title_saves"
                 android:textColor="#000000"
                 android:text="Saves"
@@ -3192,7 +3310,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv_lhl_team_6_roster"
                 android:visibility="visible"
-                android:layout_toRightOf="@id/tv_lhl_team_6_player_stats_title_goalperc"/>
+                android:layout_toRightOf="@id/tv_lhl_team_6_player_stats_title_shots"/>
+
+
 
             <TextView
                 android:id="@+id/tv_lhl_team_6_player_stats_title_saveperc"
@@ -3402,6 +3522,16 @@
                 android:layout_toRightOf="@id/tv_lhl_team_6_player_stats_title_gwg"/>
 
             <TextView
+                android:id="@+id/tv_lhl_team_6_player_stats_shots"
+                android:textColor="#000000"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_lhl_team_6_roster"
+                android:layout_toRightOf="@id/tv_lhl_team_6_player_stats_goalperc"/>
+
+            <TextView
                 android:id="@+id/tv_lhl_team_6_player_stats_saves"
                 android:textColor="#000000"
                 android:maxLines="10"
@@ -3410,7 +3540,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_lhl_team_6_player_stats_title_saves"
                 android:visibility="visible"
-                android:layout_toRightOf="@id/tv_lhl_team_6_player_stats_title_goalperc"/>
+                android:layout_toRightOf="@id/tv_lhl_team_6_player_stats_title_shots"/>
 
             <TextView
                 android:id="@+id/tv_lhl_team_6_player_stats_saveperc"
