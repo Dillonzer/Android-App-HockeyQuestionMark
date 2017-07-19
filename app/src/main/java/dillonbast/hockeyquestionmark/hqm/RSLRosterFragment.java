@@ -39,7 +39,7 @@ public class RSLRosterFragment extends Fragment {
     }
 
     private class JsoupRun extends AsyncTask<Void, Void, Void> {
-        final int TEAM_TD_SIZE = 160; // used to count the amount of tds to skip so we can count the next team
+        final int TEAM_TD_SIZE = 176; // used to count the amount of tds to skip so we can count the next team
         final int NUMBER_OF_PLAYERS = 8; //num of players
         String url = "https://sites.google.com/site/hockeyquestionmarkapp/RSLRoster";
         Elements td;
@@ -102,6 +102,8 @@ public class RSLRosterFragment extends Fragment {
             String t1_player_gpag="";
             String t1_player_wins="";
             String t1_player_so="";
+            String t1_player_toi="";
+            String t1_player_lhlaff="";
 
             TextView team1_player_name = (TextView) getView().findViewById(R.id.tv_rsl_team_1_player_stats_name);
             TextView team1_player_pos = (TextView) getView().findViewById(R.id.tv_rsl_team_1_player_stats_pos);
@@ -121,6 +123,8 @@ public class RSLRosterFragment extends Fragment {
             TextView team1_player_gpag = (TextView) getView().findViewById(R.id.tv_rsl_team_1_player_stats_gamesplayedasg);
             TextView team1_player_wins = (TextView) getView().findViewById(R.id.tv_rsl_team_1_player_stats_wins);
             TextView team1_player_so = (TextView) getView().findViewById(R.id.tv_rsl_team_1_player_stats_shutouts);
+            TextView team1_player_toi = (TextView) getView().findViewById(R.id.tv_rsl_team_1_player_stats_toi);
+            TextView team1_player_lhlaff = (TextView) getView().findViewById(R.id.tv_rsl_team_1_player_stats_lhlaff);
             int trcount = 0;
             int tdcount = 0;
             int teamCount = 0;
@@ -196,11 +200,17 @@ public class RSLRosterFragment extends Fragment {
                                     case 18:
                                         t1_player_so += ele.html() + "\n";
                                         break;
+                                    case 19:
+                                        t1_player_toi += ele.html() + "\n";
+                                        break;
+                                    case 20:
+                                        t1_player_lhlaff += ele.html();
+                                        break;
                                     default:
                                         break;
                                 }
 
-                                if(rosterCount < 18)
+                                if(rosterCount < 20)
                                     rosterCount++;
                                 else {
                                     rosterCount = 0;
@@ -269,6 +279,8 @@ public class RSLRosterFragment extends Fragment {
             team1_player_gpag.setText(t1_player_gpag);
             team1_player_wins.setText(t1_player_wins);
             team1_player_so.setText(t1_player_so);
+            team1_player_toi.setText(t1_player_toi);
+            team1_player_lhlaff.setText(t1_player_lhlaff);
 
             //team
             TextView team2_name = (TextView) getView().findViewById(R.id.tv_rsl_team_2_roster);
@@ -280,7 +292,7 @@ public class RSLRosterFragment extends Fragment {
             TextView team2_pts = (TextView) getView().findViewById(R.id.tv_rsl_team_2_stats_POINTS);
             TextView team2_streak = (TextView) getView().findViewById(R.id.tv_rsl_team_2_stats_STREAK);
 
-//players
+            //players
             String t2_player_name="";
             String t2_player_pos="";
             String t2_player_role="";
@@ -299,6 +311,8 @@ public class RSLRosterFragment extends Fragment {
             String t2_player_gpag="";
             String t2_player_wins="";
             String t2_player_so="";
+            String t2_player_toi="";
+            String t2_player_lhlaff="";
 
             TextView team2_player_name = (TextView) getView().findViewById(R.id.tv_rsl_team_2_player_stats_name);
             TextView team2_player_pos = (TextView) getView().findViewById(R.id.tv_rsl_team_2_player_stats_pos);
@@ -318,6 +332,8 @@ public class RSLRosterFragment extends Fragment {
             TextView team2_player_gpag = (TextView) getView().findViewById(R.id.tv_rsl_team_2_player_stats_gamesplayedasg);
             TextView team2_player_wins = (TextView) getView().findViewById(R.id.tv_rsl_team_2_player_stats_wins);
             TextView team2_player_so = (TextView) getView().findViewById(R.id.tv_rsl_team_2_player_stats_shutouts);
+            TextView team2_player_toi = (TextView) getView().findViewById(R.id.tv_rsl_team_2_player_stats_toi);
+            TextView team2_player_lhlaff = (TextView) getView().findViewById(R.id.tv_rsl_team_2_player_stats_lhlaff);
             trcount = 0;
             tdcount = 0;
             teamCount = 0;
@@ -332,7 +348,7 @@ public class RSLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + TEAM_TD_SIZE))
+                        if(tdcount >= (6 + (TEAM_TD_SIZE)))
                         {
 
                             if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
@@ -393,11 +409,20 @@ public class RSLRosterFragment extends Fragment {
                                     case 18:
                                         t2_player_so += ele.html() + "\n";
                                         break;
+                                    case 19:
+                                        t2_player_toi += ele.html() + "\n";
+                                        break;
+                                    case 20:
+                                        t2_player_lhlaff += ele.html()+ "\n";
+                                        break;
+                                    case 21:
+                                        t2_player_lhlaff += ele.html();
+                                        break;
                                     default:
                                         break;
                                 }
 
-                                if(rosterCount < 18)
+                                if(rosterCount < 21)
                                     rosterCount++;
                                 else {
                                     rosterCount = 0;
@@ -466,6 +491,8 @@ public class RSLRosterFragment extends Fragment {
             team2_player_gpag.setText(t2_player_gpag);
             team2_player_wins.setText(t2_player_wins);
             team2_player_so.setText(t2_player_so);
+            team2_player_toi.setText(t2_player_toi);
+            team2_player_lhlaff.setText(t2_player_lhlaff);
 
             //team
             TextView team3_name = (TextView) getView().findViewById(R.id.tv_rsl_team_3_roster);
@@ -477,7 +504,7 @@ public class RSLRosterFragment extends Fragment {
             TextView team3_pts = (TextView) getView().findViewById(R.id.tv_rsl_team_3_stats_POINTS);
             TextView team3_streak = (TextView) getView().findViewById(R.id.tv_rsl_team_3_stats_STREAK);
 
-//players
+            //players
             String t3_player_name="";
             String t3_player_pos="";
             String t3_player_role="";
@@ -496,6 +523,8 @@ public class RSLRosterFragment extends Fragment {
             String t3_player_gpag="";
             String t3_player_wins="";
             String t3_player_so="";
+            String t3_player_toi="";
+            String t3_player_lhlaff="";
 
             TextView team3_player_name = (TextView) getView().findViewById(R.id.tv_rsl_team_3_player_stats_name);
             TextView team3_player_pos = (TextView) getView().findViewById(R.id.tv_rsl_team_3_player_stats_pos);
@@ -515,6 +544,8 @@ public class RSLRosterFragment extends Fragment {
             TextView team3_player_gpag = (TextView) getView().findViewById(R.id.tv_rsl_team_3_player_stats_gamesplayedasg);
             TextView team3_player_wins = (TextView) getView().findViewById(R.id.tv_rsl_team_3_player_stats_wins);
             TextView team3_player_so = (TextView) getView().findViewById(R.id.tv_rsl_team_3_player_stats_shutouts);
+            TextView team3_player_toi = (TextView) getView().findViewById(R.id.tv_rsl_team_3_player_stats_toi);
+            TextView team3_player_lhlaff = (TextView) getView().findViewById(R.id.tv_rsl_team_3_player_stats_lhlaff);
             trcount = 0;
             tdcount = 0;
             teamCount = 0;
@@ -529,7 +560,7 @@ public class RSLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + (TEAM_TD_SIZE * 2)))//when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*2) + 8))
                         {
 
                             if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
@@ -591,12 +622,16 @@ public class RSLRosterFragment extends Fragment {
                                         t3_player_so += ele.html() + "\n";
                                         break;
                                     case 19:
+                                        t3_player_toi += ele.html() + "\n";
+                                        break;
+                                    case 20:
+                                        t3_player_lhlaff += ele.html()+ "\n";
                                         break;
                                     default:
                                         break;
                                 }
 
-                                if(rosterCount < 18)
+                                if(rosterCount < 19)
                                     rosterCount++;
                                 else {
                                     rosterCount = 0;
@@ -665,6 +700,8 @@ public class RSLRosterFragment extends Fragment {
             team3_player_gpag.setText(t3_player_gpag);
             team3_player_wins.setText(t3_player_wins);
             team3_player_so.setText(t3_player_so);
+            team3_player_toi.setText(t3_player_toi);
+            team3_player_lhlaff.setText(t3_player_lhlaff);
 
             //team
             TextView team4_name = (TextView) getView().findViewById(R.id.tv_rsl_team_4_roster);
@@ -676,7 +713,7 @@ public class RSLRosterFragment extends Fragment {
             TextView team4_pts = (TextView) getView().findViewById(R.id.tv_rsl_team_4_stats_POINTS);
             TextView team4_streak = (TextView) getView().findViewById(R.id.tv_rsl_team_4_stats_STREAK);
 
-//players
+            //players
             String t4_player_name="";
             String t4_player_pos="";
             String t4_player_role="";
@@ -695,6 +732,8 @@ public class RSLRosterFragment extends Fragment {
             String t4_player_gpag="";
             String t4_player_wins="";
             String t4_player_so="";
+            String t4_player_toi="";
+            String t4_player_lhlaff="";
 
             TextView team4_player_name = (TextView) getView().findViewById(R.id.tv_rsl_team_4_player_stats_name);
             TextView team4_player_pos = (TextView) getView().findViewById(R.id.tv_rsl_team_4_player_stats_pos);
@@ -714,6 +753,8 @@ public class RSLRosterFragment extends Fragment {
             TextView team4_player_gpag = (TextView) getView().findViewById(R.id.tv_rsl_team_4_player_stats_gamesplayedasg);
             TextView team4_player_wins = (TextView) getView().findViewById(R.id.tv_rsl_team_4_player_stats_wins);
             TextView team4_player_so = (TextView) getView().findViewById(R.id.tv_rsl_team_4_player_stats_shutouts);
+            TextView team4_player_toi = (TextView) getView().findViewById(R.id.tv_rsl_team_4_player_stats_toi);
+            TextView team4_player_lhlaff = (TextView) getView().findViewById(R.id.tv_rsl_team_4_player_stats_lhlaff);
             trcount = 0;
             tdcount = 0;
             teamCount = 0;
@@ -728,7 +769,7 @@ public class RSLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + (TEAM_TD_SIZE*3)))//when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*3)))
                         {
 
                             if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
@@ -789,11 +830,17 @@ public class RSLRosterFragment extends Fragment {
                                     case 18:
                                         t4_player_so += ele.html() + "\n";
                                         break;
+                                    case 19:
+                                        t4_player_toi += ele.html() + "\n";
+                                        break;
+                                    case 20:
+                                        t4_player_lhlaff += ele.html();
+                                        break;
                                     default:
                                         break;
                                 }
 
-                                if(rosterCount < 18)
+                                if(rosterCount < 20)
                                     rosterCount++;
                                 else {
                                     rosterCount = 0;
@@ -862,6 +909,8 @@ public class RSLRosterFragment extends Fragment {
             team4_player_gpag.setText(t4_player_gpag);
             team4_player_wins.setText(t4_player_wins);
             team4_player_so.setText(t4_player_so);
+            team4_player_toi.setText(t4_player_toi);
+            team4_player_lhlaff.setText(t4_player_lhlaff);
 
             //team
             TextView team5_name = (TextView) getView().findViewById(R.id.tv_rsl_team_5_roster);
@@ -873,7 +922,7 @@ public class RSLRosterFragment extends Fragment {
             TextView team5_pts = (TextView) getView().findViewById(R.id.tv_rsl_team_5_stats_POINTS);
             TextView team5_streak = (TextView) getView().findViewById(R.id.tv_rsl_team_5_stats_STREAK);
 
-//players
+            //players
             String t5_player_name="";
             String t5_player_pos="";
             String t5_player_role="";
@@ -892,6 +941,8 @@ public class RSLRosterFragment extends Fragment {
             String t5_player_gpag="";
             String t5_player_wins="";
             String t5_player_so="";
+            String t5_player_toi="";
+            String t5_player_lhlaff="";
 
             TextView team5_player_name = (TextView) getView().findViewById(R.id.tv_rsl_team_5_player_stats_name);
             TextView team5_player_pos = (TextView) getView().findViewById(R.id.tv_rsl_team_5_player_stats_pos);
@@ -911,6 +962,8 @@ public class RSLRosterFragment extends Fragment {
             TextView team5_player_gpag = (TextView) getView().findViewById(R.id.tv_rsl_team_5_player_stats_gamesplayedasg);
             TextView team5_player_wins = (TextView) getView().findViewById(R.id.tv_rsl_team_5_player_stats_wins);
             TextView team5_player_so = (TextView) getView().findViewById(R.id.tv_rsl_team_5_player_stats_shutouts);
+            TextView team5_player_toi = (TextView) getView().findViewById(R.id.tv_rsl_team_5_player_stats_toi);
+            TextView team5_player_lhlaff = (TextView) getView().findViewById(R.id.tv_rsl_team_5_player_stats_lhlaff);
             trcount = 0;
             tdcount = 0;
             teamCount = 0;
@@ -925,7 +978,7 @@ public class RSLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + (TEAM_TD_SIZE*4)))//when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*4)))
                         {
 
                             if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
@@ -987,12 +1040,21 @@ public class RSLRosterFragment extends Fragment {
                                         t5_player_so += ele.html() + "\n";
                                         break;
                                     case 19:
+                                        t5_player_toi += ele.html() + "\n";
                                         break;
+                                    case 20:
+                                        t5_player_lhlaff += ele.html();
+                                        break;
+                                    case 21:
+                                        t5_player_lhlaff += ele.html();
+                                        break;
+                                    case 22:
+                                        t5_player_lhlaff += ele.html()  + "\n";
                                     default:
                                         break;
                                 }
 
-                                if(rosterCount < 18)
+                                if(rosterCount < 22)
                                     rosterCount++;
                                 else {
                                     rosterCount = 0;
@@ -1061,6 +1123,9 @@ public class RSLRosterFragment extends Fragment {
             team5_player_gpag.setText(t5_player_gpag);
             team5_player_wins.setText(t5_player_wins);
             team5_player_so.setText(t5_player_so);
+            team5_player_toi.setText(t5_player_toi);
+            team5_player_lhlaff.setText(t5_player_lhlaff);
+
             //team
             TextView team6_name = (TextView) getView().findViewById(R.id.tv_rsl_team_6_roster);
             TextView team6_gp = (TextView) getView().findViewById(R.id.tv_rsl_team_6_stats_gp);
@@ -1071,7 +1136,7 @@ public class RSLRosterFragment extends Fragment {
             TextView team6_pts = (TextView) getView().findViewById(R.id.tv_rsl_team_6_stats_POINTS);
             TextView team6_streak = (TextView) getView().findViewById(R.id.tv_rsl_team_6_stats_STREAK);
 
-//players
+            //players
             String t6_player_name="";
             String t6_player_pos="";
             String t6_player_role="";
@@ -1090,6 +1155,8 @@ public class RSLRosterFragment extends Fragment {
             String t6_player_gpag="";
             String t6_player_wins="";
             String t6_player_so="";
+            String t6_player_toi="";
+            String t6_player_lhlaff="";
 
             TextView team6_player_name = (TextView) getView().findViewById(R.id.tv_rsl_team_6_player_stats_name);
             TextView team6_player_pos = (TextView) getView().findViewById(R.id.tv_rsl_team_6_player_stats_pos);
@@ -1109,6 +1176,8 @@ public class RSLRosterFragment extends Fragment {
             TextView team6_player_gpag = (TextView) getView().findViewById(R.id.tv_rsl_team_6_player_stats_gamesplayedasg);
             TextView team6_player_wins = (TextView) getView().findViewById(R.id.tv_rsl_team_6_player_stats_wins);
             TextView team6_player_so = (TextView) getView().findViewById(R.id.tv_rsl_team_6_player_stats_shutouts);
+            TextView team6_player_toi = (TextView) getView().findViewById(R.id.tv_rsl_team_6_player_stats_toi);
+            TextView team6_player_lhlaff = (TextView) getView().findViewById(R.id.tv_rsl_team_6_player_stats_lhlaff);
             trcount = 0;
             tdcount = 0;
             teamCount = 0;
@@ -1123,7 +1192,7 @@ public class RSLRosterFragment extends Fragment {
                 {
                     for (Element ele : td)
                     {
-                        if(tdcount >= (6 + (TEAM_TD_SIZE*5))) //when the team starts
+                        if(tdcount >= (6 + (TEAM_TD_SIZE*5)+16))
                         {
 
                             if(teamDone && maxPlayer < NUMBER_OF_PLAYERS)
@@ -1184,11 +1253,17 @@ public class RSLRosterFragment extends Fragment {
                                     case 18:
                                         t6_player_so += ele.html() + "\n";
                                         break;
+                                    case 19:
+                                        t6_player_toi += ele.html() + "\n";
+                                        break;
+                                    case 20:
+                                        t6_player_lhlaff += ele.html()+ "\n";
+                                        break;
                                     default:
                                         break;
                                 }
 
-                                if(rosterCount < 18)
+                                if(rosterCount < 19)
                                     rosterCount++;
                                 else {
                                     rosterCount = 0;
@@ -1257,7 +1332,8 @@ public class RSLRosterFragment extends Fragment {
             team6_player_gpag.setText(t6_player_gpag);
             team6_player_wins.setText(t6_player_wins);
             team6_player_so.setText(t6_player_so);
-
+            team6_player_toi.setText(t6_player_toi);
+            team6_player_lhlaff.setText(t6_player_lhlaff);
 
             mProgressDialog.dismiss();
         }

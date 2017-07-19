@@ -83,9 +83,9 @@ function LHLSched() {
 }
 
 function LHLStandings() {
-  var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/19eVof0YuNIPEESL0qRuJE7G8x7wGUVv--1AUNeEEPrk/edit#gid=398507116');
+  var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/19eVof0YuNIPEESL0qRuJE7G8x7wGUVv--1AUNeEEPrk/edit#gid=1148284251');
   var sheet = book.getSheets()[0]; //it's only 1 due to the hidden season 6 sheet -- season 6 sheet is gone
-  var MAX_ROWS = 13;
+  var MAX_ROWS = 11;
   var i_loop = 0;
   var celval;
   var s_rank = "";
@@ -98,22 +98,22 @@ function LHLStandings() {
   //q = team
   //s = record
   //t = points
-  var p = 16;
-  var q = 17;
-  var s = 19;
-  var t = 20;
+  var p = 14;
+  var q = 15;
+  var s = 17;
+  var t = 18;
   
   var range = sheet.getRange("A1:T200");
   celval = range.getDisplayValues();
   
   htmlToPass = "<table>";
   
-  for(i_loop = 7; i_loop < MAX_ROWS; i_loop++)
+  for(i_loop = 5; i_loop < MAX_ROWS; i_loop++)
   {
-    s_rank = celval[i_loop-1][p-1];
-    s_team = celval[i_loop-1][q-1];
-    s_record = celval[i_loop-1][s-1];
-    s_points = celval[i_loop-1][t-1];
+    s_rank = celval[i_loop][p];
+    s_team = celval[i_loop][q];
+    s_record = celval[i_loop][s];
+    s_points = celval[i_loop][t];
     
       htmlToPass += "<tr><td>" + s_rank + "</td>" + 
         "<td>" + s_team + "</td>" + 
@@ -129,9 +129,9 @@ function LHLStandings() {
 }
 
 function RSLStandings() {
-  var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/15nLk15LlQLMWPwj_KAV8zdYM5ylogfuJuPV-hOPJGrY/edit#gid=477313841');
+  var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/13S9AUzeYFrZvnd3cGujwkPlO5XrRic-vp03MW_njIV4/edit#gid=1641901572');
   var sheet = book.getSheets()[0]; //it's only 1 due to the hidden season 6 sheet
-  var MAX_ROWS = 10;
+  var MAX_ROWS = 9;
   var i_loop = 0;
   var celval;
   var s_rank = "";
@@ -154,7 +154,7 @@ function RSLStandings() {
   
   htmlToPass = "<table>";
   
-  for(i_loop = 4; i_loop < MAX_ROWS; i_loop++)
+  for(i_loop = 3; i_loop < MAX_ROWS; i_loop++)
   {
     s_rank = celval[i_loop][o];
     s_team = celval[i_loop][p];
@@ -176,7 +176,7 @@ function RSLStandings() {
 
 function RSLSched() {
   var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/15nLk15LlQLMWPwj_KAV8zdYM5ylogfuJuPV-hOPJGrY/edit#gid=1137655428');
-  var sheet = book.getSheets()[0]; //it's only 1 due to the hidden season 6 sheet -- season 6 sheet is gone?
+  var sheet = book.getSheets()[0]; 
   var MAX_ROWS = 123;//TODO: change for playoffs NOTE: Always changes when they reschedule games
   var i_loop = 0;
   var celval;
@@ -259,9 +259,9 @@ function RSLSched() {
 }
 
 function JSLStandings() {
-  var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1hwOCsdhdtvTfG87VG97CrY3-uNvRqVYhfbIcWq0EnNk/edit#gid=1685581265');
-  var sheet = book.getSheets()[1]; //it's only 1 due to the hidden season 6 sheet
-  var MAX_ROWS = 11;
+  var book = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1hwOCsdhdtvTfG87VG97CrY3-uNvRqVYhfbIcWq0EnNk/edit#gid=612669700');
+  var sheet = book.getSheets()[0]; 
+  var MAX_ROWS = 9;
   var i_loop = 0;
   var celval;
   var s_rank = "";
@@ -274,22 +274,22 @@ function JSLStandings() {
   //q = team
   //s = record
   //t = points
-  var p = 16;
-  var q = 17;
-  var s = 19;
-  var t = 20;
+  var p = 15;
+  var q = 16;
+  var s = 18;
+  var t = 19;
   
   var range = sheet.getRange("A1:T200");
   celval = range.getDisplayValues();
   
   htmlToPass = "<table>";
   
-  for(i_loop = 5; i_loop < MAX_ROWS; i_loop++)
+  for(i_loop = 3; i_loop < MAX_ROWS; i_loop++)
   {
-    s_rank = celval[i_loop][p-1];
-    s_team = celval[i_loop][q-1];
-    s_record = celval[i_loop][s-1];
-    s_points = celval[i_loop][t-1];
+    s_rank = celval[i_loop][p];
+    s_team = celval[i_loop][q];
+    s_record = celval[i_loop][s];
+    s_points = celval[i_loop][t];
     
       htmlToPass += "<tr><td>" + s_rank + "</td>" + 
         "<td>" + s_team + "</td>" + 
@@ -493,7 +493,7 @@ function getRangeforLHLRoster() {
         for(i_loop = START_POS_HIGH; i_loop < (START_POS_HIGH+NUM_OF_PLAYERS); i_loop++)
         {
           htmlToPass += "<tr>"
-          for(j_loop = (NUM_OF_STATS+NUM_OF_STATS+2); j_loop < (NUM_OF_STATS+NUM_OF_STATS+NUM_OF_STATS+1); j_loop++)
+          for(j_loop = (NUM_OF_STATS+NUM_OF_STATS+2); j_loop < (NUM_OF_STATS+NUM_OF_STATS+NUM_OF_STATS+2); j_loop++)
           {
             htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>";
           }
@@ -556,7 +556,7 @@ function getRangeforLHLRoster() {
         for(i_loop = START_POS_LOW; i_loop < (START_POS_LOW+NUM_OF_PLAYERS); i_loop++)
         {
           htmlToPass += "<tr>"
-          for(j_loop = (NUM_OF_STATS+NUM_OF_STATS+2); j_loop < (NUM_OF_STATS+NUM_OF_STATS+NUM_OF_STATS+1); j_loop++)
+          for(j_loop = (NUM_OF_STATS+NUM_OF_STATS+2); j_loop < (NUM_OF_STATS+NUM_OF_STATS+NUM_OF_STATS+2); j_loop++)
           {
             htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
           }
@@ -889,7 +889,7 @@ function getRangeforRSLRoster() {
         for(i_loop = START_POS_LOW; i_loop < (START_POS_LOW+NUM_OF_PLAYERS); i_loop++)
         {
           htmlToPass += "<tr>"
-          for(j_loop = (NUM_OF_STATS+NUM_OF_STATS+4); j_loop < (NUM_OF_STATS+NUM_OF_STATS+NUM_OF_STATS+1); j_loop++)
+          for(j_loop = (NUM_OF_STATS+NUM_OF_STATS+4); j_loop < (NUM_OF_STATS+NUM_OF_STATS+NUM_OF_STATS+3); j_loop++)
           {
               htmlToPass += "<td>" + celval[i_loop][j_loop] + "</td>"
           }
